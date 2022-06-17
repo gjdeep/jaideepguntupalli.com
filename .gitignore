@@ -1,0 +1,6 @@
+node_modules/
+.cache
+public
+
+# Mac crap
+.DS_Store

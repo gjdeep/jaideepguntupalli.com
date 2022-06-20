@@ -1,12 +1,50 @@
 import * as React from "react";
-import icon from "../images/icon.png";
+import { Link } from "gatsby";
+import logo from "../images/logo.svg";
+import HLink from "../components/Header/HLink";
+import HCta from "../components/Header/HCta";
 
 const Header = () => {
     return (
-        <header className="sticky lg:fixed z-10 w-full">
-            <nav className="flex flex-col gap-4 lg:gap-0 lg:flex-row justify-between items-center p-4 pl-8 bg-[#1A2F52] backdrop-blur shadow-lg lg:bg-opacity-70 text-center">
-                <img src={icon} alt="Gatsby Logo" className="h-12" />
-            </nav>
+        <header className="absolute top-0 w-full z-10">
+            <section className="max-w-[1836px] mx-auto px-8 sm:px-10 md:px-16 lg:px-20 xl:px-24 py-4 flex justify-between items-center font-medium text-lg">
+                <Link to="/">
+                    <img src={logo} alt="Gatsby Logo" className="h-12" />
+                </Link>
+                <nav className="hidden sm:flex sm:w-2/5 xl:w-1/3  justify-between">
+                    <HLink
+                        text="Home"
+                        addr="https://blog.jaideepguntupalli.com/"
+                        extclass="hidden lg:block"
+                    />
+                    <HLink
+                        text="About"
+                        addr="https://blog.jaideepguntupalli.com/"
+                    />
+                    <HLink
+                        text="Work"
+                        addr="https://blog.jaideepguntupalli.com/"
+                    />
+                    <HLink
+                        text="Projects"
+                        addr="https://blog.jaideepguntupalli.com/"
+                    />
+                    <HLink
+                        text="Blog"
+                        addr="https://blog.jaideepguntupalli.com/"
+                    />
+                    <HCta
+                        text="Let's Talk!"
+                        addr="https://blog.jaideepguntupalli.com/"
+                        extclass="block sm:hidden"
+                    />
+                </nav>
+                <HCta
+                    text="Let's Talk!"
+                    addr="https://blog.jaideepguntupalli.com/"
+                    extclass="hidden sm:block"
+                />
+            </section>
         </header>
     );
 };

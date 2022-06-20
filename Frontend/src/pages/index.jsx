@@ -1,11 +1,14 @@
 import * as React from "react";
 import Layout from "../layout/Layout";
+import Hero from "../sections/home/Hero";
+import About from "../sections/home/About";
 
 // markup
 const IndexPage = () => {
     return (
-        <Layout>
-            <h1 className="text-5xl py-10 px-6">Gatsby X TailwindCSS</h1>
+        <Layout pageTitle="Jaideep Guntupalli">
+            <Hero />
+            <About />
         </Layout>
     );
 };

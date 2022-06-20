@@ -1,14 +1,16 @@
 module.exports = {
     siteMetadata: {
-        title: ``,
-        siteUrl: `https://www.yourdomain.tld`,
+        title: `Jaideep Guntupalli`,
+        siteUrl: `http://localhost:8000/s`,
     },
     plugins: [
         "gatsby-plugin-postcss",
+        "gatsby-plugin-react-helmet",
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
-                icon: "src/images/icon.png",
+                name: `Jaideep Guntupalli`,
+                icon: "src/images/favicon.png",
             },
         },
     ],

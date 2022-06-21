@@ -16,7 +16,7 @@ const Layout = ({ pageTitle, children }) => {
             <main className="px-8 sm:px-10 md:px-16 lg:px-20 xl:px-24 max-w-[1836px] mx-auto">
                 {children}
             </main>
-            {/* <Footer /> */}
+            <Footer />
         </div>
     );
 };

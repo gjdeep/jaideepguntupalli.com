@@ -3,6 +3,7 @@ import Layout from "../layout/Layout";
 import Hero from "../sections/home/Hero";
 import About from "../sections/home/About";
 import Skills from "../sections/home/Skills";
+import Projects from "../sections/home/Projects";
 
 // markup
 const IndexPage = () => {
@@ -11,6 +12,7 @@ const IndexPage = () => {
             <Hero />
             <About />
             <Skills />
+            <Projects />
         </Layout>
     );
 };

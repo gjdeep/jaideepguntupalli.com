@@ -9,11 +9,15 @@ import organisations from "./organisations";
 import projects from "./projects";
 import skills from "./skills";
 import skill from "./skill";
+import hero from "./home/hero";
+import aboutpoint from "./home/aboutpoint";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
     name: "default",
     types: schemaTypes.concat([
+        hero,
+        aboutpoint,
         experiences,
         organisations,
         projects,

@@ -24,3 +24,8 @@
     background-size: 100% 2px;
     background-position: 0 100%;
 }
+
+img {
+    user-select: none;
+    -webkit-user-drag: none;
+}

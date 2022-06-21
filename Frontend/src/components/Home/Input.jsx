@@ -9,7 +9,7 @@ const Input = ({ label }) => {
             <input
                 type="text"
                 id={label}
-                className="text-2xl border-b-2 border-cus-orange bg-transparent py-1 focus:outline-none focus:border-b-4"
+                className="text-2xl border-b-[1.25px] border-cus-orange bg-transparent py-1 focus:outline-none focus:border-b-2"
             />
         </div>
     );

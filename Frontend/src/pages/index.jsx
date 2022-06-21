@@ -5,6 +5,7 @@ import About from "../sections/home/About";
 import Skills from "../sections/home/Skills";
 import Projects from "../sections/home/Projects";
 import Organisations from "../sections/home/Organisations";
+import Contact from "../sections/home/Contact";
 
 // markup
 const IndexPage = () => {
@@ -15,6 +16,7 @@ const IndexPage = () => {
             <Skills />
             <Projects />
             <Organisations />
+            <Contact />
         </Layout>
     );
 };

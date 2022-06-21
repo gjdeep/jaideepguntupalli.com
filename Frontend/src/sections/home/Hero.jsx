@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "gatsby";
 import Btn from "../../components/common/Btn";
 import Laptop from "../../images/icons/Laptop.svg";
 import Github from "../../images/icons/Github.svg";
@@ -41,9 +42,15 @@ const Hero = () => {
                     </p>
                 </section>
                 <section className="flex gap-5">
-                    <img src={Github} alt="" />
-                    <img src={Linkedin} alt="" />
-                    <img src={Twitter} alt="" />
+                    <Link to="https://github.com/JaideepGuntupalli">
+                        <img src={Github} alt="Github Logo" />
+                    </Link>
+                    <Link to="https://linkedin.com/in/gjdeep">
+                        <img src={Linkedin} alt="LinkedIn Logo" />
+                    </Link>
+                    <Link to="https://twitter.com/gjdeep">
+                        <img src={Twitter} alt="Twitter Logo" />
+                    </Link>
                 </section>
             </section>
 

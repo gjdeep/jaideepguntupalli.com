@@ -11,6 +11,7 @@ module.exports = {
             colors: {
                 "cus-orange": "#EA4638",
                 "cus-light-orange": "#F3F0F1",
+                "cus-orange-dark": "#E03C2F",
             },
             screens: {
                 "3xl": "1792px",

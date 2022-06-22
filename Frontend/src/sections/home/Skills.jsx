@@ -83,16 +83,19 @@ const Skills = () => {
                         date="May 2022"
                         role="Frontend Developer Intern"
                         company="Tweek Labs"
+                        addr="/work-experience/tweek-labs"
                     />
                     <WorkExp
                         date="Apr 2022"
                         role="Web Developer Intern"
                         company="Pixotronics"
+                        addr="/work-experience/pixotronics"
                     />
                     <WorkExp
                         date="Mar 2022"
                         role="Software Engineer Intern"
                         company="Auriga Innovative Labs"
+                        addr="/work-experience/auriga-innovative-labs"
                     />
                 </div>
             </section>

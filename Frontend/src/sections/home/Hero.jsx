@@ -29,7 +29,7 @@ const Hero = () => {
                     <Btn
                         text="My Work"
                         addr="#"
-                        extclass="bg-cus-orange text-white"
+                        extclass="bg-cus-orange text-white hover:bg-cus-orange-dark"
                     />
                     <Btn
                         text="Know More"

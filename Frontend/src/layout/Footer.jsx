@@ -11,12 +11,16 @@ const Footer = () => {
         <footer className="px-8 sm:px-10 md:px-16 lg:px-20 xl:px-24 flex flex-col  gap-8 md:gap-10 py-16">
             <div className="h-[2px] w-full bg-cus-orange" />
             <div className="flex flex-col md:flex-row items-center justify-between gap-2 md:gap-0">
-                <img src={logo} alt="Jaideep Logo" className=" md:w-1/6" />
+                <Link to="/" className=" md:w-1/6">
+                    <img src={logo} alt="Jaideep Logo" />
+                </Link>
                 <Link
                     to="mailto:guntupallijaideep@gmail.com"
                     className="text-xl md:text-4xl font-medium md:pr-8"
                 >
-                    guntupallijaideep@gmail.com
+                    <span className="hover:text-cus-orange link-underline link-underline-orange link-underline:hover">
+                        guntupallijaideep@gmail.com
+                    </span>
                 </Link>
             </div>
 

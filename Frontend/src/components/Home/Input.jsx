@@ -2,7 +2,7 @@ import * as React from "react";
 
 const Input = ({ label }) => {
     return (
-        <div className="flex flex-col gap-4 w-1/2">
+        <div className="flex flex-col gap-4 w-full md:w-1/2">
             <label htmlFor={label} className="font-bold text-[2rem]">
                 {label}
             </label>

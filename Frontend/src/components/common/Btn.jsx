@@ -6,7 +6,7 @@ const Btn = ({ text, addr, extclass }) => {
         <Link
             to={addr}
             className={
-                "border-2 border-cus-orange px-12 py-5 font-medium text-xl " +
+                "border-2 border-cus-orange px-6 md:px-12 py-3 md:py-5 font-medium md:text-xl " +
                 extclass
             }
         >

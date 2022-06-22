@@ -4,7 +4,7 @@ import Input from "../../components/Home/Input";
 
 const Contact = () => {
     return (
-        <section className="py-28">
+        <section id="contact" className="py-20 md:py-28">
             <SectHeading
                 heading="Let’s Talk!"
                 link={false}

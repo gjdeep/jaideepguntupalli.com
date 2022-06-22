@@ -10,14 +10,14 @@ import postman from "../../images/companies/postman.svg";
 
 const Organisations = () => {
     return (
-        <section className="py-28">
+        <section id="org" className="py-20 md:py-28">
             <SectHeading
                 heading="Organisations I have worked with"
                 link={true}
                 linktext="View more details"
                 addr="/organisations"
             />
-            <div className="grid grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <Org
                     companyLogo={ieee}
                     role="Web Master"

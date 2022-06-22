@@ -7,20 +7,20 @@ import dev from "../../images/icons/dev.svg";
 
 const About = () => {
     return (
-        <section className="py-28">
+        <section id="about" className="py-20 md:py-28">
             <SectHeading
                 heading="About Me!"
                 link={true}
                 linktext="View more details"
                 addr="/about"
             />
-            <section className="flex gap-12">
-                <h3 className="font-bold text-[4rem] w-1/2 leading-tight">
+            <section className="flex flex-col md:flex-row gap-12">
+                <h3 className="font-bold text-4xl md:text-[4rem] md:w-1/2 leading-tight">
                     Creative{" "}
                     <span className="whitespace-nowrap">Full Stack</span> Web
                     Developer with UI/UX Background
                 </h3>
-                <section className="flex w-3/4 flex-col justify-between gap-8">
+                <section className="flex md:w-3/4 flex-col justify-between gap-8">
                     <AboutPoint
                         title="Full Stack Web Developer"
                         desc="I am a Full-stack web developer specializing in developing JAM Stack applications with Better Performance, Higher Security and Cheaper, Easier Scaling."

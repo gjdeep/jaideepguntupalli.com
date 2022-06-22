@@ -8,20 +8,20 @@ import Twitter from "../images/icons/Twitter.svg";
 
 const Footer = () => {
     return (
-        <footer className="px-8 sm:px-10 md:px-16 lg:px-20 xl:px-24 flex flex-col gap-10 py-16">
+        <footer className="px-8 sm:px-10 md:px-16 lg:px-20 xl:px-24 flex flex-col  gap-8 md:gap-10 py-16">
             <div className="h-[2px] w-full bg-cus-orange" />
-            <div className="flex items-center justify-between">
-                <img src={logo} alt="Jaideep Logo" className=" w-1/6" />
+            <div className="flex flex-col md:flex-row items-center justify-between gap-2 md:gap-0">
+                <img src={logo} alt="Jaideep Logo" className=" md:w-1/6" />
                 <Link
                     to="mailto:guntupallijaideep@gmail.com"
-                    className="text-4xl font-medium pr-8"
+                    className="text-xl md:text-4xl font-medium md:pr-8"
                 >
                     guntupallijaideep@gmail.com
                 </Link>
             </div>
 
-            <div className="flex items-center justify-between">
-                <p className="text-xl">
+            <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-8">
+                <p className="text-xl text-center md:text-left">
                     © 2022 Jaideep Guntupalli. All Rights Reserved.
                 </p>
                 <section className="flex gap-5 pr-8">

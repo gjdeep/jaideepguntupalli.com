@@ -22,35 +22,63 @@ import WorkExp from "../../components/Home/WorkExp";
 
 const Skills = () => {
     return (
-        <section className="py-28">
+        <section id="skills" className="py-20 md:py-28">
             <SectHeading
                 heading="Work Experience & Skills"
                 link={true}
                 linktext="View more details"
                 addr="/skills"
             />
-            <section className="flex justify-between gap-20">
-                <div className="grid grid-cols-6 gap-4">
+            <section className="flex flex-col md:flex-row justify-between gap-20">
+                <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
                     <img src={javascript} alt="javascript" />
-                    <img src={typescript} alt="typescript" />
+                    <img
+                        className="hidden md:block"
+                        src={typescript}
+                        alt="typescript"
+                    />
                     <img src={next} alt="next" />
-                    <img src={react} alt="react" />
-                    <img src={gatsby} alt="gatsby" />
+                    <img className="hidden md:block" src={react} alt="react" />
+                    <img
+                        className="hidden md:block"
+                        src={gatsby}
+                        alt="gatsby"
+                    />
                     <img src={tailwindcss} alt="tailwindcss" />
                     <img src={gcp} alt="gcp" />
                     <img src={firebase} alt="firebase" />
                     <img src={mysql} alt="mysql" />
-                    <img src={postgres} alt="postgres" />
-                    <img src={mongo} alt="mongo" />
-                    <img src={sanity} alt="sanity" />
-                    <img src={graphsql} alt="graphql" />
+                    <img
+                        className="hidden md:block"
+                        src={postgres}
+                        alt="postgres"
+                    />
+                    <img className="hidden md:block" src={mongo} alt="mongo" />
+                    <img
+                        className="hidden md:block"
+                        src={sanity}
+                        alt="sanity"
+                    />
+                    <img
+                        className="hidden md:block"
+                        src={graphsql}
+                        alt="graphql"
+                    />
                     <img src={node} alt="node" />
-                    <img src={postman} alt="postman" />
+                    <img
+                        className="hidden md:block"
+                        src={postman}
+                        alt="postman"
+                    />
                     <img src={java} alt="java" />
-                    <img src={heroku} alt="heroku" />
+                    <img
+                        className="hidden md:block"
+                        src={heroku}
+                        alt="heroku"
+                    />
                     <img src={flutter} alt="flutter" />
                 </div>
-                <div className="w-2/5 flex flex-col justify-around">
+                <div className="md:w-2/5 flex flex-col justify-around gap-10 md:gap-6">
                     <WorkExp
                         date="May 2022"
                         role="Frontend Developer Intern"

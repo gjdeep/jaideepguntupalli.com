@@ -4,7 +4,9 @@ import * as React from "react";
 const SectHeading = ({ heading, link, linktext, addr }) => {
     return (
         <div className="mb-16">
-            <h2 className=" font-bold text-5xl py-2">{heading}</h2>
+            <h2 className=" font-bold text-5xl py-2 leading-tight">
+                {heading}
+            </h2>
             <div className="flex items-center gap-4">
                 {link ? (
                     <Link

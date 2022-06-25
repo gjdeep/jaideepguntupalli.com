@@ -1,4 +1,7 @@
 import * as React from "react";
+import { useIntersection } from "react-use";
+import gsap from "gsap";
+import { useRef } from "react";
 import SectHeading from "../../components/common/SectHeading";
 import Org from "../../components/Home/Org";
 import binance from "../../images/companies/binance.svg";
@@ -9,8 +12,40 @@ import biobytes from "../../images/companies/biobytes.svg";
 import postman from "../../images/companies/postman.svg";
 
 const Organisations = () => {
+    const sectionRef = useRef(null);
+    const intersection = useIntersection(sectionRef, {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.4,
+    });
+
+    const fadeIn = (element) => {
+        gsap.to(element, {
+            duration: 2,
+            opacity: 1,
+            y: 0,
+            ease: "power4.out",
+            stagger: {
+                amount: 0.3,
+            },
+        });
+    };
+
+    const fadeOut = (element) => {
+        gsap.to(element, {
+            duration: 2,
+            opacity: 0,
+            y: 40,
+            ease: "power4.out",
+        });
+    };
+
+    intersection && intersection.intersectionRatio < 0.4
+        ? fadeOut(".fadeInOrg")
+        : fadeIn(".fadeInOrg");
+
     return (
-        <section id="org" className="py-20 md:py-28">
+        <section ref={sectionRef} id="org" className="py-20 md:py-28 fadeInOrg">
             <SectHeading
                 heading="Organisations I have worked with"
                 link={true}

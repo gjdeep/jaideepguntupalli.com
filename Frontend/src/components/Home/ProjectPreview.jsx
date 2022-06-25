@@ -10,7 +10,7 @@ const ProjectPreview = ({
     linktext,
 }) => {
     return (
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-3 fadeInProj">
             <Link to={link}>
                 <img src={image} alt={title} className="w-full h-auto" />
             </Link>

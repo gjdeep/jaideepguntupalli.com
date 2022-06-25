@@ -1,4 +1,7 @@
 import * as React from "react";
+import { useIntersection } from "react-use";
+import gsap from "gsap";
+import { useRef } from "react";
 import SectHeading from "./../../components/common/SectHeading";
 import AboutPoint from "../../components/Home/AboutPoint";
 import flutter from "../../images/icons/flutter.svg";
@@ -6,8 +9,40 @@ import design from "../../images/icons/design.svg";
 import dev from "../../images/icons/dev.svg";
 
 const About = () => {
+    const sectionRef = useRef(null);
+    const intersection = useIntersection(sectionRef, {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.4,
+    });
+
+    const fadeIn = (element) => {
+        gsap.to(element, {
+            duration: 1,
+            opacity: 1,
+            y: 0,
+            ease: "power4.out",
+            stagger: {
+                amount: 0.3,
+            },
+        });
+    };
+
+    const fadeOut = (element) => {
+        gsap.to(element, {
+            duration: 1,
+            opacity: 0,
+            y: 40,
+            ease: "power4.out",
+        });
+    };
+
+    intersection && intersection.intersectionRatio < 0.4
+        ? fadeOut(".fadeIn")
+        : fadeIn(".fadeIn");
+
     return (
-        <section id="about" className="py-20 md:py-28">
+        <section ref={sectionRef} id="about" className="py-20 md:py-28 fadeIn">
             <SectHeading
                 heading="About Me!"
                 link={true}
@@ -15,7 +50,7 @@ const About = () => {
                 addr="/about"
             />
             <section className="flex flex-col md:flex-row gap-12">
-                <h3 className="font-bold text-4xl md:text-[4rem] md:w-1/2 leading-tight">
+                <h3 className="font-bold text-4xl md:text-[4rem] md:w-1/2 leading-tight fadeIn">
                     Creative{" "}
                     <span className="whitespace-nowrap">Full Stack</span> Web
                     Developer with UI/UX Background

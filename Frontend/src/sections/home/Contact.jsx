@@ -1,9 +1,44 @@
 import * as React from "react";
+import { useIntersection } from "react-use";
+import gsap from "gsap";
+import { useRef } from "react";
 import SectHeading from "./../../components/common/SectHeading";
 import { useState } from "react";
 import axios from "axios";
 
 const Contact = () => {
+    const sectionRef = useRef(null);
+    const intersection = useIntersection(sectionRef, {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.4,
+    });
+
+    const fadeIn = (element) => {
+        gsap.to(element, {
+            duration: 2,
+            opacity: 1,
+            y: 0,
+            ease: "power4.out",
+            stagger: {
+                amount: 0.3,
+            },
+        });
+    };
+
+    const fadeOut = (element) => {
+        gsap.to(element, {
+            duration: 2,
+            opacity: 0,
+            y: 40,
+            ease: "power4.out",
+        });
+    };
+
+    intersection && intersection.intersectionRatio < 0.4
+        ? fadeOut(".fadeInContact")
+        : fadeIn(".fadeInContact");
+
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
@@ -63,7 +98,11 @@ const Contact = () => {
     };
 
     return (
-        <section id="contact" className="py-20 md:py-28">
+        <section
+            ref={sectionRef}
+            id="contact"
+            className="py-20 md:py-28 fadeInContact"
+        >
             <SectHeading
                 heading="Let’s Talk!"
                 link={false}
@@ -73,7 +112,7 @@ const Contact = () => {
                 onSubmit={handleSubmit}
                 className="flex flex-col items-start gap-12"
             >
-                <div className="flex flex-col gap-4 w-full md:w-1/2">
+                <div className="flex flex-col gap-4 w-full md:w-1/2 fadeInContact">
                     <label htmlFor="name" className="font-bold text-[2rem]">
                         Name
                     </label>
@@ -86,7 +125,7 @@ const Contact = () => {
                         className="text-2xl border-b-[1.25px] border-cus-orange bg-transparent py-1 focus:outline-none focus:border-b-2"
                     />
                 </div>
-                <div className="flex flex-col gap-4 w-full md:w-1/2">
+                <div className="flex flex-col gap-4 w-full md:w-1/2 fadeInContact">
                     <label htmlFor="email" className="font-bold text-[2rem]">
                         Email
                     </label>
@@ -99,7 +138,7 @@ const Contact = () => {
                         className="text-2xl border-b-[1.25px] border-cus-orange bg-transparent py-1 focus:outline-none focus:border-b-2"
                     />
                 </div>
-                <div className="flex flex-col gap-4 w-full md:w-1/2">
+                <div className="flex flex-col gap-4 w-full md:w-1/2 fadeInContact">
                     <label htmlFor="msg" className="font-bold text-[2rem]">
                         Message
                     </label>
@@ -125,7 +164,7 @@ const Contact = () => {
                 <input
                     type="submit"
                     value="Send it !"
-                    className="px-12 py-5 font-medium text-xl bg-cus-orange text-white cursor-pointer hover:bg-cus-orange-dark transition-colors duration-200"
+                    className="px-12 py-5 font-medium text-xl bg-cus-orange text-white cursor-pointer hover:bg-cus-orange-dark transition-colors duration-200 fadeInContact"
                 />
             </form>
         </section>

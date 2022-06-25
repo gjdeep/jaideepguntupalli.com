@@ -1,4 +1,7 @@
 import * as React from "react";
+import { useIntersection } from "react-use";
+import gsap from "gsap";
+import { useRef } from "react";
 import SectHeading from "../../components/common/SectHeading";
 import firebase from "../../images/icons/tech/firebase.svg";
 import flutter from "../../images/icons/tech/flutter.svg";
@@ -21,8 +24,43 @@ import sanity from "../../images/icons/tech/sanity.svg";
 import WorkExp from "../../components/Home/WorkExp";
 
 const Skills = () => {
+    const sectionRef = useRef(null);
+    const intersection = useIntersection(sectionRef, {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.4,
+    });
+
+    const fadeIn = (element) => {
+        gsap.to(element, {
+            duration: 1,
+            opacity: 1,
+            y: 0,
+            ease: "power4.out",
+            stagger: {
+                amount: 0.3,
+            },
+        });
+    };
+
+    const fadeOut = (element) => {
+        gsap.to(element, {
+            duration: 1,
+            opacity: 0,
+            y: 40,
+            ease: "power4.out",
+        });
+    };
+
+    intersection && intersection.intersectionRatio < 0.4
+        ? fadeOut(".fadeInSkills")
+        : fadeIn(".fadeInSkills");
     return (
-        <section id="skills" className="py-20 md:py-28">
+        <section
+            ref={sectionRef}
+            id="skills"
+            className="py-20 md:py-28 fadeInSkills"
+        >
             <SectHeading
                 heading="Work Experience & Skills"
                 link={true}
@@ -30,53 +68,73 @@ const Skills = () => {
                 addr="/skills"
             />
             <section className="flex flex-col md:flex-row justify-between gap-20">
-                <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
-                    <img src={javascript} alt="javascript" />
+                <div className="grid grid-cols-3 md:grid-cols-6 gap-4 fadeInSkills">
                     <img
-                        className="hidden md:block"
+                        className="fadeInSkills"
+                        src={javascript}
+                        alt="javascript"
+                    />
+                    <img
+                        className="hidden md:block fadeInSkills"
                         src={typescript}
                         alt="typescript"
                     />
-                    <img src={next} alt="next" />
-                    <img className="hidden md:block" src={react} alt="react" />
+                    <img className="fadeInSkills" src={next} alt="next" />
                     <img
-                        className="hidden md:block"
+                        className="hidden md:block fadeInSkills"
+                        src={react}
+                        alt="react"
+                    />
+                    <img
+                        className="hidden md:block fadeInSkills"
                         src={gatsby}
                         alt="gatsby"
                     />
-                    <img src={tailwindcss} alt="tailwindcss" />
-                    <img src={gcp} alt="gcp" />
-                    <img src={firebase} alt="firebase" />
-                    <img src={mysql} alt="mysql" />
                     <img
-                        className="hidden md:block"
+                        className="fadeInSkills"
+                        src={tailwindcss}
+                        alt="tailwindcss"
+                    />
+                    <img className="fadeInSkills" src={gcp} alt="gcp" />
+                    <img
+                        className="fadeInSkills"
+                        src={firebase}
+                        alt="firebase"
+                    />
+                    <img className="fadeInSkills" src={mysql} alt="mysql" />
+                    <img
+                        className="hidden md:block fadeInSkills"
                         src={postgres}
                         alt="postgres"
                     />
-                    <img className="hidden md:block" src={mongo} alt="mongo" />
                     <img
-                        className="hidden md:block"
+                        className="hidden md:block fadeInSkills"
+                        src={mongo}
+                        alt="mongo"
+                    />
+                    <img
+                        className="hidden md:block fadeInSkills"
                         src={sanity}
                         alt="sanity"
                     />
                     <img
-                        className="hidden md:block"
+                        className="hidden md:block fadeInSkills"
                         src={graphsql}
                         alt="graphql"
                     />
-                    <img src={node} alt="node" />
+                    <img className="fadeInSkills" src={node} alt="node" />
                     <img
-                        className="hidden md:block"
+                        className="hidden md:block fadeInSkills"
                         src={postman}
                         alt="postman"
                     />
-                    <img src={java} alt="java" />
+                    <img className="fadeInSkills" src={java} alt="java" />
                     <img
-                        className="hidden md:block"
+                        className="hidden md:block fadeInSkills"
                         src={heroku}
                         alt="heroku"
                     />
-                    <img src={flutter} alt="flutter" />
+                    <img className="fadeInSkills" src={flutter} alt="flutter" />
                 </div>
                 <div className="md:w-2/5 flex flex-col justify-around gap-10 md:gap-6">
                     <WorkExp

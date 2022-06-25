@@ -2,7 +2,7 @@ import * as React from "react";
 
 const AboutPoint = ({ title, img, imgAlt, desc }) => {
     return (
-        <div className="flex items-start gap-8">
+        <div className="flex items-start gap-8 fadeIn">
             <img
                 src={img}
                 alt={imgAlt}

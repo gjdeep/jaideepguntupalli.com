@@ -1,7 +1,7 @@
 import * as React from "react";
-import { useIntersection } from "react-use";
-import gsap from "gsap";
-import { useRef } from "react";
+// import { useIntersection } from "react-use";
+// import gsap from "gsap";
+// import { useRef } from "react";
 import { Link } from "gatsby";
 import Btn from "../../components/common/Btn";
 import Laptop from "../../images/icons/Laptop.svg";
@@ -12,41 +12,40 @@ import Me from "../../images/home/Me.png";
 import Rect from "../../images/home/Grad Rect.png";
 
 const Hero = () => {
-    const sectionRef = useRef(null);
-    const intersection = useIntersection(sectionRef, {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.4,
-    });
+    // const sectionRef = useRef(null);
+    // const intersection = useIntersection(sectionRef, {
+    //     root: null,
+    //     rootMargin: "0px",
+    //     threshold: 0.4,
+    // });
 
-    const fadeIn = (element) => {
-        gsap.to(element, {
-            duration: 1,
-            opacity: 1,
-            y: 0,
-            ease: "power4.out",
-            stagger: {
-                amount: 0.3,
-            },
-        });
-    };
+    // const fadeIn = (element) => {
+    //     gsap.to(element, {
+    //         duration: 1,
+    //         opacity: 1,
+    //         y: 0,
+    //         ease: "power4.out",
+    //         stagger: {
+    //             amount: 0.3,
+    //         },
+    //     });
+    // };
 
-    const fadeOut = (element) => {
-        gsap.to(element, {
-            duration: 1,
-            opacity: 0,
-            y: 40,
-            ease: "power4.out",
-        });
-    };
+    // const fadeOut = (element) => {
+    //     gsap.to(element, {
+    //         duration: 1,
+    //         opacity: 0,
+    //         y: 40,
+    //         ease: "power4.out",
+    //     });
+    // };
 
-    intersection && intersection.intersectionRatio < 0.4
-        ? fadeOut(".fadeInHero")
-        : fadeIn(".fadeInHero");
+    // intersection && intersection.intersectionRatio < 0.4
+    //     ? fadeOut(".fadeInHero")
+    //     : fadeIn(".fadeInHero");
 
     return (
         <section
-            ref={sectionRef}
             id="home"
             className="h-screen min-h-[821px] pt-20 relative flex flex-col md:flex-row justify-between"
         >

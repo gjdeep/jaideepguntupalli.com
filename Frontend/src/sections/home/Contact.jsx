@@ -1,43 +1,43 @@
 import * as React from "react";
-import { useIntersection } from "react-use";
-import gsap from "gsap";
-import { useRef } from "react";
+// import { useIntersection } from "react-use";
+// import gsap from "gsap";
+// import { useRef } from "react";
 import SectHeading from "./../../components/common/SectHeading";
 import { useState } from "react";
 import axios from "axios";
 
 const Contact = () => {
-    const sectionRef = useRef(null);
-    const intersection = useIntersection(sectionRef, {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.4,
-    });
+    // const sectionRef = useRef(null);
+    // const intersection = useIntersection(sectionRef, {
+    //     root: null,
+    //     rootMargin: "0px",
+    //     threshold: 0.4,
+    // });
 
-    const fadeIn = (element) => {
-        gsap.to(element, {
-            duration: 2,
-            opacity: 1,
-            y: 0,
-            ease: "power4.out",
-            stagger: {
-                amount: 0.3,
-            },
-        });
-    };
+    // const fadeIn = (element) => {
+    //     gsap.to(element, {
+    //         duration: 2,
+    //         opacity: 1,
+    //         y: 0,
+    //         ease: "power4.out",
+    //         stagger: {
+    //             amount: 0.3,
+    //         },
+    //     });
+    // };
 
-    const fadeOut = (element) => {
-        gsap.to(element, {
-            duration: 2,
-            opacity: 0,
-            y: 40,
-            ease: "power4.out",
-        });
-    };
+    // const fadeOut = (element) => {
+    //     gsap.to(element, {
+    //         duration: 2,
+    //         opacity: 0,
+    //         y: 40,
+    //         ease: "power4.out",
+    //     });
+    // };
 
-    intersection && intersection.intersectionRatio < 0.4
-        ? fadeOut(".fadeInContact")
-        : fadeIn(".fadeInContact");
+    // intersection && intersection.intersectionRatio < 0.4
+    //     ? fadeOut(".fadeInContact")
+    //     : fadeIn(".fadeInContact");
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -98,11 +98,7 @@ const Contact = () => {
     };
 
     return (
-        <section
-            ref={sectionRef}
-            id="contact"
-            className="py-20 md:py-28 fadeInContact"
-        >
+        <section id="contact" className="py-20 md:py-28 fadeInContact">
             <SectHeading
                 heading="Let’s Talk!"
                 link={false}

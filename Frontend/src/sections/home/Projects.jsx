@@ -1,7 +1,7 @@
 import * as React from "react";
-import { useIntersection } from "react-use";
-import gsap from "gsap";
-import { useRef } from "react";
+// import { useIntersection } from "react-use";
+// import gsap from "gsap";
+// import { useRef } from "react";
 import SectHeading from "../../components/common/SectHeading";
 import ProjectPreview from "../../components/Home/ProjectPreview";
 import cric from "../../images/projects/cricopedia.png";
@@ -10,43 +10,39 @@ import asm from "../../images/projects/assembler.png";
 import msg from "../../images/projects/msg.png";
 
 const Projects = () => {
-    const sectionRef = useRef(null);
-    const intersection = useIntersection(sectionRef, {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.1,
-    });
+    // const sectionRef = useRef(null);
+    // const intersection = useIntersection(sectionRef, {
+    //     root: null,
+    //     rootMargin: "0px",
+    //     threshold: 0.1,
+    // });
 
-    const fadeIn = (element) => {
-        gsap.to(element, {
-            duration: 1,
-            opacity: 1,
-            y: 0,
-            ease: "power4.out",
-            stagger: {
-                amount: 0.3,
-            },
-        });
-    };
+    // const fadeIn = (element) => {
+    //     gsap.to(element, {
+    //         duration: 1,
+    //         opacity: 1,
+    //         y: 0,
+    //         ease: "power4.out",
+    //         stagger: {
+    //             amount: 0.3,
+    //         },
+    //     });
+    // };
 
-    const fadeOut = (element) => {
-        gsap.to(element, {
-            duration: 1,
-            opacity: 0,
-            y: 40,
-            ease: "power4.out",
-        });
-    };
+    // const fadeOut = (element) => {
+    //     gsap.to(element, {
+    //         duration: 1,
+    //         opacity: 0,
+    //         y: 40,
+    //         ease: "power4.out",
+    //     });
+    // };
 
-    intersection && intersection.intersectionRatio < 0.1
-        ? fadeOut(".fadeInProj")
-        : fadeIn(".fadeInProj");
+    // intersection && intersection.intersectionRatio < 0.1
+    //     ? fadeOut(".fadeInProj")
+    //     : fadeIn(".fadeInProj");
     return (
-        <section
-            ref={sectionRef}
-            id="projects"
-            className="py-20 md:py-28 fadeInProj"
-        >
+        <section id="projects" className="py-20 md:py-28 fadeInProj">
             <SectHeading
                 heading="Projects"
                 link={true}

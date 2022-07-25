@@ -63,12 +63,12 @@ const Hero = () => {
                 <section className="flex gap-4 md:gap-10 ">
                     <Btn
                         text="My Work"
-                        addr="#"
+                        addr="#projects"
                         extclass="bg-cus-orange text-white hover:bg-cus-orange-dark"
                     />
                     <Btn
                         text="Know More"
-                        addr="#"
+                        addr="#about"
                         extclass="hover:bg-cus-orange hover:text-white"
                     />
                 </section>

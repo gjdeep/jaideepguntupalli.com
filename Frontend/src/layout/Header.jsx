@@ -17,22 +17,19 @@ const Header = () => {
                         addr="#home"
                         extclass="hidden lg:block"
                     />
-                    <HLink text="About" addr="#about" />
-                    <HLink text="Work" addr="#skills" />
-                    <HLink text="Projects" addr="#projects" />
-                    <HLink
-                        text="Blog"
-                        addr="https://blog.jaideepguntupalli.com/"
-                    />
+                    <HLink text="About" addr="/#about" />
+                    <HLink text="Work" addr="/#skills" />
+                    <HLink text="Projects" addr="/#projects" />
+                    <HLink text="Blog" addr="/blog" />
                     <HCta
                         text="Let's Talk!"
-                        addr="#contact"
+                        addr="/#contact"
                         extclass="block sm:hidden"
                     />
                 </nav>
                 <HCta
                     text="Let's Talk!"
-                    addr="#contact"
+                    addr="/#contact"
                     extclass="hidden sm:block"
                 />
             </section>

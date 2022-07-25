@@ -10,9 +10,13 @@ const ProjectPreview = ({
     linktext,
 }) => {
     return (
-        <div className="flex flex-col gap-3 fadeInProj">
+        <div className="flex flex-col gap-3 fadeInProj p-6 border-2 rounded-md border-transparent transition-all hover:border-black hover:bg-white hover:scale-105">
             <Link to={link}>
-                <img src={image} alt={title} className="w-full h-auto" />
+                <img
+                    src={image}
+                    alt={title}
+                    className="w-full h-auto rounded-md"
+                />
             </Link>
             <div className="flex flex-col w-full gap-2">
                 <h4 className="font-work font-medium opacity-50">{date}</h4>

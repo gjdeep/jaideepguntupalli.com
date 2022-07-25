@@ -63,7 +63,7 @@ const Skills = () => {
                 linktext="View more details"
                 addr="/skills"
             />
-            <section className="flex flex-col md:flex-row justify-between gap-20">
+            <section className="flex flex-col md:flex-row justify-between gap-12">
                 <div className="grid grid-cols-3 md:grid-cols-6 gap-4 fadeInSkills">
                     <img
                         className="fadeInSkills"
@@ -132,10 +132,10 @@ const Skills = () => {
                     />
                     <img className="fadeInSkills" src={flutter} alt="flutter" />
                 </div>
-                <div className="md:w-2/5 flex flex-col justify-around gap-10 md:gap-6">
+                <div className="md:w-2/5 flex flex-col justify-around gap-6 md:gap-6">
                     <WorkExp
                         date="May 2022"
-                        role="Frontend Developer Intern"
+                        role="Frontend Web Dev Intern"
                         company="Tweek Labs"
                         addr="/work-experience/tweek-labs"
                     />

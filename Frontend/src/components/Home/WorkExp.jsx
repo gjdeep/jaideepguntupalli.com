@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 
 const WorkExp = ({ date, role, company, addr }) => {
     return (
-        <div className="flex items-start gap-8 fadeInSkills">
+        <div className="flex items-start gap-8 fadeInSkills p-4 border-2 rounded-md border-transparent transition-all hover:border-black hover:bg-white hover:scale-105">
             <h4 className="font-bold text-2x whitespace-nowrap opacity-50">
                 {date}
             </h4>

@@ -12,11 +12,7 @@ const Header = () => {
                     <img src={logo} alt="Gatsby Logo" className="h-12" />
                 </Link>
                 <nav className="hidden sm:flex sm:w-2/5 xl:w-1/3  justify-between">
-                    <HLink
-                        text="Home"
-                        addr="#home"
-                        extclass="hidden lg:block"
-                    />
+                    <HLink text="Home" addr="/" extclass="hidden lg:block" />
                     <HLink text="About" addr="/#about" />
                     <HLink text="Work" addr="/#skills" />
                     <HLink text="Projects" addr="/#projects" />

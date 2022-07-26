@@ -10,7 +10,7 @@ const ProjectPreview = ({
     linktext,
 }) => {
     return (
-        <div className="flex flex-col gap-3 fadeInProj p-6 border-2 rounded-md border-transparent transition-all hover:border-black hover:bg-white hover:scale-105">
+        <div className="flex flex-col gap-3 fadeInProj p-6 rounded-md border-2 border-transparent transition-all hover:border-black hover:bg-white hover:scale-105">
             <Link to={link}>
                 <img
                     src={image}

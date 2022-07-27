@@ -3,11 +3,11 @@ import { Link } from "gatsby";
 
 export function BlogPreview({ title, author, authorImg, date, img }) {
     return (
-        <section className="h-[30vh] flex gap-6 p-5 border-2 rounded-lg border-transparent transition-all hover:border-black hover:bg-white hover:scale-105">
+        <section className="md:h-[30vh] flex flex-col md:flex-row gap-6 p-5 border-2 rounded-lg border-transparent transition-all hover:border-black hover:bg-white hover:scale-105">
             <img
                 src={img}
                 alt="Code Thumbnail"
-                className="w-1/2 object-cover rounded-lg"
+                className="md:w-1/2 object-cover rounded-lg"
             />
             <div className="flex flex-col gap-4">
                 <Link to="#" className="text-4xl font-bold">

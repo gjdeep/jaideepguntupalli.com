@@ -13,7 +13,7 @@ const TutorialBlogs = () => {
                 linktext="View More"
                 addr="#"
             />
-            <section className="grid grid-cols-2 w-11/12 mx-auto">
+            <section className="grid md:grid-cols-2 md:w-11/12 mx-auto">
                 <BlogPreview
                     img={code}
                     title="Hover Animation of a Button using only CSS"

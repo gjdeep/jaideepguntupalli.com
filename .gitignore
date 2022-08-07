@@ -3,5 +3,8 @@ node_modules/
 public
 dist
 
+# Environmental variables
+.env
+
 # Mac crap
 .DS_Store

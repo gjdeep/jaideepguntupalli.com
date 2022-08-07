@@ -1,35 +1,38 @@
 {
-  "name": "jaideepguntupallicom",
-  "private": true,
-  "version": "1.0.0",
-  "description": "This is the code base of [Jaideep Guntupalli](https://www.jaideepguntupalli.com)",
-  "main": "package.json",
-  "author": "Jaideep Guntupalli <guntupallijaideep@gmail.com>",
-  "license": "UNLICENSED",
-  "scripts": {
-    "start": "sanity start",
-    "build": "sanity build"
-  },
-  "keywords": [
-    "sanity"
-  ],
-  "dependencies": {
-    "@sanity/base": "^2.30.4",
-    "@sanity/core": "^2.30.3",
-    "@sanity/default-layout": "^2.30.4",
-    "@sanity/default-login": "^2.30.4",
-    "@sanity/desk-tool": "^2.30.4",
-    "@sanity/eslint-config-studio": "^2.0.0",
-    "@sanity/vision": "^2.30.4",
-    "eslint": "^8.6.0",
-    "prop-types": "^15.7",
-    "react": "^17.0",
-    "react-dom": "^17.0",
-    "styled-components": "^5.2.0"
-  },
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/JaideepGuntupalli/jaideep-portfolio.git"
-  }
+    "name": "jaideepguntupallicom",
+    "private": true,
+    "version": "1.0.0",
+    "description": "This is the code base of [Jaideep Guntupalli](https://www.jaideepguntupalli.com)",
+    "main": "package.json",
+    "author": "Jaideep Guntupalli <guntupallijaideep@gmail.com>",
+    "license": "MIT",
+    "scripts": {
+        "start": "sanity start",
+        "build": "sanity build"
+    },
+    "keywords": [
+        "sanity"
+    ],
+    "dependencies": {
+        "@sanity/base": "^2.30.4",
+        "@sanity/core": "^2.30.3",
+        "@sanity/default-layout": "^2.30.4",
+        "@sanity/default-login": "^2.30.4",
+        "@sanity/desk-tool": "^2.30.4",
+        "@sanity/eslint-config-studio": "^2.0.0",
+        "@sanity/vision": "^2.30.4",
+        "eslint": "^8.6.0",
+        "prop-types": "^15.7",
+        "react": "^17.0",
+        "react-dom": "^17.0",
+        "sanity-plugin-asset-source-unsplash": "^0.2.1",
+        "styled-components": "^5.2.0"
+    },
+    "devDependencies": {
+        "@babel/preset-env": "^7.18.10"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/JaideepGuntupalli/jaideep-portfolio.git"
+    }
 }

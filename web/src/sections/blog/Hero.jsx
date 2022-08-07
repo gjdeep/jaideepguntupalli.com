@@ -18,7 +18,7 @@ const Hero = () => {
                     <img
                         src={code}
                         alt="Code Thumbnail"
-                        className="h-full object-cover rounded-lg"
+                        className="h-full object-cover max-h-[384px] rounded-lg"
                     />
 
                     <div className="flex flex-col gap-2">

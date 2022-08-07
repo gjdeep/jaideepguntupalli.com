@@ -1,7 +1,4 @@
 import * as React from "react";
-// import { useIntersection } from "react-use";
-// import gsap from "gsap";
-// import { useRef } from "react";
 import SectHeading from "../../components/common/SectHeading";
 import firebase from "../../images/icons/tech/firebase.svg";
 import flutter from "../../images/icons/tech/flutter.svg";
@@ -24,37 +21,6 @@ import sanity from "../../images/icons/tech/sanity.svg";
 import WorkExp from "../../components/Home/WorkExp";
 
 const Skills = () => {
-    // const sectionRef = useRef(null);
-    // const intersection = useIntersection(sectionRef, {
-    //     root: null,
-    //     rootMargin: "0px",
-    //     threshold: 0.4,
-    // });
-
-    // const fadeIn = (element) => {
-    //     gsap.to(element, {
-    //         duration: 1,
-    //         opacity: 1,
-    //         y: 0,
-    //         ease: "power4.out",
-    //         stagger: {
-    //             amount: 0.3,
-    //         },
-    //     });
-    // };
-
-    // const fadeOut = (element) => {
-    //     gsap.to(element, {
-    //         duration: 1,
-    //         opacity: 0,
-    //         y: 40,
-    //         ease: "power4.out",
-    //     });
-    // };
-
-    // intersection && intersection.intersectionRatio < 0.4
-    //     ? fadeOut(".fadeInSkills")
-    //     : fadeIn(".fadeInSkills");
     return (
         <section id="skills" className="py-20 md:py-28 fadeInSkills">
             <SectHeading

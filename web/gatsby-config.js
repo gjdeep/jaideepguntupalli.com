@@ -21,6 +21,7 @@ module.exports = {
             options: {
                 projectId: `yr7gi15i`,
                 dataset: `blog`,
+                watchMode: true,
                 token: process.env.SANITY_TOKEN,
             },
         },

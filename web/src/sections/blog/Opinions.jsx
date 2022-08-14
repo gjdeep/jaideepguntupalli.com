@@ -1,5 +1,6 @@
 import * as React from "react";
 import { BlogPreview } from "../../components/Blog/BlogPreview";
+import BlogGrid from "../../components/Blog/BlogGrid";
 import SectHeading from "../../components/common/SectHeading";
 import code from "../../images/blog/code.png";
 import jaideep from "../../images/blog/jaideep.jpg";
@@ -13,7 +14,7 @@ const OpinionBlogs = () => {
                 linktext="View More"
                 addr="#"
             />
-            <section className="grid md:grid-cols-2 md:w-11/12 mx-auto">
+            <BlogGrid>
                 <BlogPreview
                     img={code}
                     title="Hover Animation of a Button using only CSS"
@@ -35,7 +36,7 @@ const OpinionBlogs = () => {
                     authorImg={jaideep}
                     date="Apr 17, 2022"
                 />
-            </section>
+            </BlogGrid>
         </section>
     );
 };

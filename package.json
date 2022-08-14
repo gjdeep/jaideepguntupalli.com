@@ -1,0 +1,24 @@
+{
+    "name": "jaideepguntupalli.com",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "https://github.com/JaideepGuntupalli/jaideep-portfolio.git",
+    "author": "Jaideep <guntupallijaideep@gmail.com>",
+    "license": "MIT",
+    "private": true,
+    "workspaces": [
+        "web",
+        "studio"
+    ],
+    "scripts": {
+        "pkg:web": "yarn workspace web install",
+        "pkg:studio": "yarn workspace studio install",
+        "pkg": "yarn pkg:web && yarn pkg:studio",
+        "dev:web": "yarn workspace web dev",
+        "dev:studio": "yarn workspace studio start",
+        "dev": "concurrently \"yarn dev:web\" \"yarn dev:studio\""
+    },
+    "devDependencies": {
+        "concurrently": "^7.3.0"
+    }
+}

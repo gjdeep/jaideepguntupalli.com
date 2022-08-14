@@ -1,12 +1,12 @@
 {
-    "name": "example",
+    "name": "web",
     "version": "1.0.0",
-    "private": true,
-    "description": "example",
+    "description": "gatsby web frontend client",
     "author": "Jaideep",
     "keywords": [
         "gatsby"
     ],
+    "private": true,
     "scripts": {
         "dev": "gatsby develop",
         "build": "gatsby build",

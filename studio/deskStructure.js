@@ -23,6 +23,7 @@ export default () =>
                 (item) =>
                     item.getId() === "post" ||
                     item.getId() === "tag" ||
+                    item.getId() === "category" ||
                     item.getId() === "author"
             ),
             S.divider(),

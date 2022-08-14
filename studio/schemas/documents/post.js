@@ -87,17 +87,10 @@ export default {
         {
             title: "Category",
             name: "category",
-            type: "string",
+            type: "reference",
+            to: [{ type: "category" }],
             options: {
-                list: [
-                    { title: "Experiences", value: "experiences" },
-                    { title: "Technologies", value: "technologies" },
-                    { title: "Tools", value: "tools" },
-                    { title: "Good Practices", value: "goodPractices" },
-                    { title: "Tutorials", value: "tutorials" },
-                    { title: "Product", value: "product" },
-                    { title: "Reviews", value: "reviews" },
-                ],
+                disableNew: true,
             },
         },
     ],

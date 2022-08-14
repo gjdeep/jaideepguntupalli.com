@@ -14,14 +14,14 @@ const Footer = () => {
                 <Link to="/" className=" md:w-1/6">
                     <img src={logo} alt="Jaideep Logo" />
                 </Link>
-                <Link
-                    to="mailto:guntupallijaideep@gmail.com"
+                <a
+                    href="mailto:guntupallijaideep@gmail.com"
                     className="text-xl md:text-4xl font-medium md:pr-8"
                 >
                     <span className="hover:text-cus-orange link-underline link-underline-orange link-underline:hover">
                         guntupallijaideep@gmail.com
                     </span>
-                </Link>
+                </a>
             </div>
 
             <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-8">
@@ -29,15 +29,15 @@ const Footer = () => {
                     © 2022 Jaideep Guntupalli. All Rights Reserved.
                 </p>
                 <section className="flex gap-5 pr-8">
-                    <Link to="https://github.com/JaideepGuntupalli">
+                    <a href="https://github.com/JaideepGuntupalli">
                         <img src={Github} alt="Github Logo" />
-                    </Link>
-                    <Link to="https://linkedin.com/in/gjdeep">
+                    </a>
+                    <a href="https://linkedin.com/in/gjdeep">
                         <img src={Linkedin} alt="LinkedIn Logo" />
-                    </Link>
-                    <Link to="https://twitter.com/gjdeep">
+                    </a>
+                    <a href="https://twitter.com/gjdeep">
                         <img src={Twitter} alt="Twitter Logo" />
-                    </Link>
+                    </a>
                 </section>
             </div>
         </footer>

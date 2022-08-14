@@ -1,27 +1,39 @@
 {
-    "root": true,
-    "project": {
-        "name": "jaideepguntupalli.com"
+  "root": true,
+  "project": {
+    "name": "jaideepguntupalli.com"
+  },
+  "api": {
+    "projectId": "yr7gi15i",
+    "dataset": "blog"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/components",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool",
+    "@sanity/color-input"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "@sanity/vision"
+      ]
+    }
+  },
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema"
     },
-    "api": {
-        "projectId": "yr7gi15i",
-        "dataset": "blog"
+    {
+      "name": "part:@sanity/desk-tool/structure",
+      "path": "./deskStructure.js"
     },
-    "plugins": [
-        "@sanity/base",
-        "@sanity/default-layout",
-        "@sanity/default-login",
-        "@sanity/desk-tool"
-    ],
-    "env": {
-        "development": {
-            "plugins": ["@sanity/vision"]
-        }
-    },
-    "parts": [
-        {
-            "name": "part:@sanity/base/schema",
-            "path": "./schemas/schema"
-        }
-    ]
+    {
+      "implements": "part:@sanity/base/theme/variables/override-style",
+      "path": "variableOverrides.css"
+    }
+  ]
 }

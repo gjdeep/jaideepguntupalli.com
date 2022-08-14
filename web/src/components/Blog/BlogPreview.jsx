@@ -1,16 +1,24 @@
 import React from "react";
 import { Link } from "gatsby";
 
-export function BlogPreview({ title, author, authorImg, date, img }) {
+export function BlogPreview({
+    title,
+    author,
+    authorImg,
+    date,
+    img,
+    imgAlt,
+    slug,
+}) {
     return (
         <section className="md:h-[30vh] flex flex-col md:flex-row gap-6 p-5 border-2 rounded-lg border-transparent transition-all hover:border-black hover:bg-white hover:scale-105">
             <img
                 src={img}
-                alt="Code Thumbnail"
+                alt={imgAlt}
                 className="md:w-1/2 object-cover rounded-lg"
             />
             <div className="flex flex-col gap-4">
-                <Link to="#" className="text-4xl font-bold">
+                <Link to={"/blog/" + slug} className="text-4xl font-bold">
                     <h2 className="text-2xl font-bold">
                         <span className="hover:text-cus-orange link-underline link-underline-orange link-underline:hover">
                             {title}

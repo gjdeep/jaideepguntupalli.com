@@ -1,15 +1,15 @@
 import * as React from "react";
-import SectHeading from "../../components/common/SectHeading";
-import code from "../../images/blog/code.png";
 import { BlogPreview } from "../../components/Blog/BlogPreview";
 import BlogGrid from "../../components/Blog/BlogGrid";
+import SectHeading from "../../components/common/SectHeading";
+import code from "../../images/blog/code.png";
 import jaideep from "../../images/blog/jaideep.jpg";
 
-const TutorialBlogs = () => {
+const BlogSection = ({ title }) => {
     return (
         <section className="pt-40">
             <SectHeading
-                heading="Tutorials"
+                heading={title}
                 link={true}
                 linktext="View More"
                 addr="#"
@@ -48,4 +48,4 @@ const TutorialBlogs = () => {
     );
 };
 
-export default TutorialBlogs;
+export default BlogSection;

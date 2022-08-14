@@ -38,7 +38,6 @@ const AllBlogs = () => {
         }
     `);
     const posts = data.allSanityPost.nodes.map((post) => {
-        console.log(post.coverImg);
         return (
             <BlogPreview
                 key={post._id}

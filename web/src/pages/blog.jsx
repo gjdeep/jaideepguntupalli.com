@@ -1,11 +1,11 @@
 import * as React from "react";
-import Layout from "../layout/Layout";
+import Layout from "../templates/layout/Layout";
 import Hero from "../sections/blog/Hero";
 import AllBlogs from "../sections/blog/AllBlogs";
 import BlogSection from "../sections/blog/BlogSection";
 import { useStaticQuery, graphql } from "gatsby";
 
-const BlogPage = () => {
+const BlogPreviewPage = () => {
     const data = useStaticQuery(graphql`
         query {
             allSanityPost(sort: { fields: postedDate, order: DESC }) {
@@ -71,4 +71,4 @@ const BlogPage = () => {
     );
 };
 
-export default BlogPage;
+export default BlogPreviewPage;

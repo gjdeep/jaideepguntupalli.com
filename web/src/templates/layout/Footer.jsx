@@ -1,10 +1,10 @@
 import * as React from "react";
-import logo from "../images/logo.svg";
+import logo from "../../images/logo.svg";
 import { Link } from "gatsby";
 
-import Github from "../images/icons/Github.svg";
-import Linkedin from "../images/icons/Linkedin.svg";
-import Twitter from "../images/icons/Twitter.svg";
+import Github from "../../images/icons/Github.svg";
+import Linkedin from "../../images/icons/Linkedin.svg";
+import Twitter from "../../images/icons/Twitter.svg";
 
 const Footer = () => {
     return (

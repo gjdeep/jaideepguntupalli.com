@@ -1,6 +1,6 @@
 import * as React from "react";
 import Btn from "../components/common/Btn";
-import Layout from "../layout/Layout";
+import Layout from "../templates/layout/Layout";
 import err from "../images/404.svg";
 
 // markup

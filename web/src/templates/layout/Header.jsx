@@ -1,8 +1,8 @@
 import * as React from "react";
 import { Link } from "gatsby";
-import logo from "../images/logo.svg";
-import HLink from "../components/Header/HLink";
-import HCta from "../components/Header/HCta";
+import logo from "../../images/logo.svg";
+import HLink from "../../components/Header/HLink";
+import HCta from "../../components/Header/HCta";
 
 const Header = () => {
     return (

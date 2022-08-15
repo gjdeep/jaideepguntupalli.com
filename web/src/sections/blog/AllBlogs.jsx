@@ -4,40 +4,8 @@ import { BlogPreview } from "../../components/Blog/BlogPreview";
 import BlogGrid from "../../components/Blog/BlogGrid";
 import SectHeading from "../../components/common/SectHeading";
 
-const AllBlogs = () => {
-    const data = useStaticQuery(graphql`
-        query {
-            allSanityPost(sort: { fields: postedDate, order: DESC }) {
-                nodes {
-                    _id
-                    slug {
-                        current
-                    }
-                    title
-                    postedDate(formatString: "MMM DD, YYYY")
-                    coverImg {
-                        asset {
-                            resize(width: 1200, format: WEBP) {
-                                src
-                            }
-                        }
-                        alt
-                    }
-                    author {
-                        fName
-                        lName
-                        photo {
-                            alt
-                            asset {
-                                url
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    `);
-    const posts = data.allSanityPost.nodes.map((post) => {
+const AllBlogs = ({ data }) => {
+    const posts = data.nodes.map((post) => {
         return (
             <BlogPreview
                 key={post._id}

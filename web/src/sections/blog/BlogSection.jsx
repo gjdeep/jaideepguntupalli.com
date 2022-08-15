@@ -2,50 +2,49 @@ import * as React from "react";
 import { BlogPreview } from "../../components/Blog/BlogPreview";
 import BlogGrid from "../../components/Blog/BlogGrid";
 import SectHeading from "../../components/common/SectHeading";
-import code from "../../images/blog/code.png";
-import jaideep from "../../images/blog/jaideep.jpg";
 
-const BlogSection = ({ title }) => {
-    return (
-        <section className="pt-40">
-            <SectHeading
-                heading={title}
-                link={true}
-                linktext="View More"
-                addr="#"
-            />
-            <BlogGrid>
+const BlogSection = ({ title, postData }) => {
+    const posts = postData.nodes;
+
+    if (posts.length === 0) {
+        return null;
+    }
+
+    let isNull = true;
+
+    const allPosts = posts.map((post) => {
+        if (post.category.categoryName === title) {
+            isNull = false;
+            return (
                 <BlogPreview
-                    img={code}
-                    title="Hover Animation of a Button using only CSS"
-                    author="Jaideep Guntupalli"
-                    authorImg={jaideep}
-                    date="Apr 17, 2022"
+                    key={post._id}
+                    img={post.coverImg.asset.resize.src}
+                    imgAlt={post.coverImg.alt}
+                    title={post.title}
+                    slug={post.slug.current}
+                    author={post.author.fName + " " + post.author.lName}
+                    authorImg={post.author.photo.asset.url}
+                    date={post.postedDate}
                 />
-                <BlogPreview
-                    img={code}
-                    title="Hover Animation of a Button using only CSS"
-                    author="Jaideep Guntupalli"
-                    authorImg={jaideep}
-                    date="Apr 17, 2022"
+            );
+        }
+    });
+
+    if (isNull) {
+        return null;
+    } else {
+        return (
+            <section className="pt-40">
+                <SectHeading
+                    heading={title}
+                    link={true}
+                    linktext="View More"
+                    addr="#"
                 />
-                <BlogPreview
-                    img={code}
-                    title="Hover Animation of a Button using only CSS"
-                    author="Jaideep Guntupalli"
-                    authorImg={jaideep}
-                    date="Apr 17, 2022"
-                />
-                <BlogPreview
-                    img={code}
-                    title="Hover Animation of a Button using only CSS"
-                    author="Jaideep Guntupalli"
-                    authorImg={jaideep}
-                    date="Apr 17, 2022"
-                />
-            </BlogGrid>
-        </section>
-    );
+                <BlogGrid>{allPosts}</BlogGrid>
+            </section>
+        );
+    }
 };
 
 export default BlogSection;

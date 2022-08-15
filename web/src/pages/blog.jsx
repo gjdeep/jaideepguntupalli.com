@@ -3,16 +3,70 @@ import Layout from "../layout/Layout";
 import Hero from "../sections/blog/Hero";
 import AllBlogs from "../sections/blog/AllBlogs";
 import BlogSection from "../sections/blog/BlogSection";
+import { useStaticQuery, graphql } from "gatsby";
 
 const BlogPage = () => {
+    const data = useStaticQuery(graphql`
+        query {
+            allSanityPost(sort: { fields: postedDate, order: DESC }) {
+                nodes {
+                    _id
+                    slug {
+                        current
+                    }
+                    title
+                    postedDate(formatString: "MMM DD, YYYY")
+                    coverImg {
+                        asset {
+                            resize(width: 1200, format: WEBP) {
+                                src
+                            }
+                        }
+                        alt
+                    }
+                    author {
+                        fName
+                        lName
+                        photo {
+                            alt
+                            asset {
+                                url
+                            }
+                        }
+                    }
+                    category {
+                        categoryName
+                    }
+                }
+            }
+            allSanityCategory {
+                nodes {
+                    _id
+                    categoryName
+                }
+            }
+        }
+    `);
+    const categoriesQuery = data.allSanityCategory;
+
+    const postData = data.allSanityPost;
+
+    const categories = categoriesQuery.nodes.map((category) => {
+        return (
+            <BlogSection
+                key={category._id}
+                title={category.categoryName}
+                postData={postData}
+            />
+        );
+    });
+
+    console.log(categoriesQuery);
     return (
         <Layout pageTitle="Blog | Jaideep Guntupalli">
             <Hero />
-            <AllBlogs />
-            <BlogSection title="Experiences" />
-            <BlogSection title="Tutorials" />
-            <BlogSection title="Reviews" />
-            <BlogSection title="Opinions" />
+            <AllBlogs data={postData} />
+            {categories}
         </Layout>
     );
 };

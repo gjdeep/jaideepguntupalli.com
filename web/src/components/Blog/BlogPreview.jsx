@@ -15,7 +15,7 @@ export function BlogPreview({
             <img
                 src={img}
                 alt={imgAlt}
-                className="md:w-1/2 object-cover rounded-lg"
+                className="md:w-2/5 object-cover rounded-lg"
             />
             <div className="flex flex-col gap-4">
                 <Link to={"/blog/" + slug} className="text-4xl font-bold">

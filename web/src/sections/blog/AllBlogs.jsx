@@ -1,5 +1,4 @@
 import * as React from "react";
-import { useStaticQuery, graphql } from "gatsby";
 import { BlogPreview } from "../../components/Blog/BlogPreview";
 import BlogGrid from "../../components/Blog/BlogGrid";
 import SectHeading from "../../components/common/SectHeading";

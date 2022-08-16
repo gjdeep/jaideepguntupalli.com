@@ -4,6 +4,19 @@ import BlogGrid from "../../components/Blog/BlogGrid";
 import SectHeading from "../../components/common/SectHeading";
 
 const BlogSection = ({ title, postData }) => {
+    if (postData === null) {
+        return (
+            <section className="pt-40">
+                <SectHeading
+                    heading={title}
+                    link={true}
+                    linktext="View More"
+                    addr={"/blog/" + title}
+                />
+            </section>
+        );
+    }
+
     const posts = postData.nodes;
 
     if (posts.length === 0) {
@@ -28,6 +41,7 @@ const BlogSection = ({ title, postData }) => {
                 />
             );
         }
+        return null;
     });
 
     if (isNull) {
@@ -39,7 +53,7 @@ const BlogSection = ({ title, postData }) => {
                     heading={title}
                     link={true}
                     linktext="View More"
-                    addr="#"
+                    addr={"/blog/" + title}
                 />
                 <BlogGrid>{allPosts}</BlogGrid>
             </section>

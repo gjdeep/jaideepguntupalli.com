@@ -53,7 +53,7 @@ const Hero = () => {
                         current
                     }
                     title
-                    postedDate(formatString: "MMM DD, YYYY")
+                    postedDate(formatString: "DD MMM YYYY")
                     coverImg {
                         asset {
                             resize(width: 1200, format: WEBP) {

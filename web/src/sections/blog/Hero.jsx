@@ -56,9 +56,7 @@ const Hero = () => {
                     postedDate(formatString: "DD MMM YYYY")
                     coverImg {
                         asset {
-                            resize(width: 1200, format: WEBP) {
-                                src
-                            }
+                            url
                         }
                         alt
                     }
@@ -80,7 +78,7 @@ const Hero = () => {
         return (
             <SideBlogPreview
                 key={sidePost._id}
-                img={sidePost.coverImg.asset.resize.src}
+                img={sidePost.coverImg.asset.url}
                 imgAlt={sidePost.coverImg.alt}
                 title={sidePost.title}
                 slug={sidePost.slug.current}

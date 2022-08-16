@@ -15,9 +15,7 @@ const FeaturedBlogPreview = () => {
                     postedDate(formatString: "DD MMM YYYY")
                     coverImg {
                         asset {
-                            resize(width: 1200, format: WEBP) {
-                                src
-                            }
+                            url
                         }
                         alt
                     }
@@ -37,7 +35,7 @@ const FeaturedBlogPreview = () => {
     `);
 
     let post = featuredPost.allSanityPost.nodes[0];
-    let img = post.coverImg.asset.resize.src;
+    let img = post.coverImg.asset.url;
     let imgAlt = post.coverImg.alt;
     let title = post.title;
     let slug = post.slug.current;

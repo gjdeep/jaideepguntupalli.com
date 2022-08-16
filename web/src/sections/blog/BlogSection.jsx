@@ -31,7 +31,7 @@ const BlogSection = ({ title, postData }) => {
             return (
                 <BlogPreview
                     key={post._id}
-                    img={post.coverImg.asset.resize.src}
+                    img={post.coverImg.asset.url}
                     imgAlt={post.coverImg.alt}
                     title={post.title}
                     slug={post.slug.current}

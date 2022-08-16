@@ -18,9 +18,7 @@ const BlogPreviewPage = () => {
                     postedDate(formatString: "DD MMM YYYY")
                     coverImg {
                         asset {
-                            resize(width: 1200, format: WEBP) {
-                                src
-                            }
+                            url
                         }
                         alt
                     }

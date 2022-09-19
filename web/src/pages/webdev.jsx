@@ -9,6 +9,7 @@ import ieee from "../images/projects/ieee.png";
 import Jaideep from "../images/projects/Jaideep.png";
 import mor from "../images/projects/mor.png";
 import msg from "../images/projects/msg.png";
+import pixo from "../images/projects/pixo.png";
 
 // markup
 const WebDevPage = () => {
@@ -38,7 +39,7 @@ const WebDevPage = () => {
                         date="July 2022"
                         title="Portfolio Website"
                         description="Designed & Developed a personal portfolio site with blog using GatsbyJS, ReactJS, TailwindCSS and Sanity. Hosted using a virutal private server on DigitalOcean."
-                        link="https://github.com/JaideepGuntupalli?tab=repositories&q=cric-o-pedia&type=&language=&sort="
+                        link="/"
                         linktext="More details >>"
                     />
                     <ProjectPreview
@@ -46,7 +47,7 @@ const WebDevPage = () => {
                         date="June 2022"
                         title="BackSlash Website"
                         description="Refactored and prepared the back slash website for event during July 2022. Hosted using a virutal private server on Google Cloud."
-                        link="https://github.com/JaideepGuntupalli?tab=repositories&q=cric-o-pedia&type=&language=&sort="
+                        link="https://github.com/IEEE-IIIT-Delhi/slash-platform"
                         linktext="More details >>"
                     />
                     <ProjectPreview
@@ -66,11 +67,11 @@ const WebDevPage = () => {
                         linktext="More details >>"
                     />
                     <ProjectPreview
-                        image={cric}
+                        image={pixo}
                         date="Apr 2022"
                         title="WebGI Pixotronics"
                         description="Developed the newly redesigned landing page of Pixotronics(client) using Sergey, a light-weight HTML-based Static Site Generator, TailwindCSS, and JavaScript.Integrated 3D scenes, videos as well as Hubspot's custom booking pages into website."
-                        link="https://github.com/JaideepGuntupalli?tab=repositories&q=cric-o-pedia&type=&language=&sort="
+                        link="https://webgi.pixotronics.com/"
                         linktext="More details >>"
                     />
                     <ProjectPreview
@@ -78,7 +79,7 @@ const WebDevPage = () => {
                         date="Mar 2022"
                         title="Mor-Chiraiya"
                         description="Designed & developed Mor-Chiraiya for a client with Google Analytics to track and understand user activity on the page. Integrated razorpay with the website to accept nest orders."
-                        link="https://github.com/JaideepGuntupalli/messaging-app"
+                        link="https://mor-chiraiya.org/"
                         linktext="More details >>"
                     />
                     <ProjectPreview
@@ -86,7 +87,7 @@ const WebDevPage = () => {
                         date="Feb 2022"
                         title="IEEE-IIITD Student Branch Website"
                         description="Developed IEEE-IIITD website with a custom CMS using Sanity with Astro using ReactJS for frontend. "
-                        link="https://github.com/JaideepGuntupalli/messaging-app"
+                        link="https://github.com/IEEE-IIIT-Delhi/ieee.iiitd.edu.in"
                         linktext="More details >>"
                     />
                     {/* <ProjectPreview

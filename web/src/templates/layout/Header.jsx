@@ -6,7 +6,7 @@ import HCta from "../../components/Header/HCta";
 
 const Header = () => {
     return (
-        <header className="absolute top-0 w-full z-10">
+        <header className="fixed top-0 w-full z-10 bg-cus-light-orange/60 backdrop-blur-md">
             <section className="max-w-[1436px] mx-auto px-8 sm:px-10 md:px-16 lg:px-20 xl:px-24 py-4 flex justify-between items-center font-medium text-lg">
                 <Link to="/">
                     <img src={logo} alt="Gatsby Logo" className="h-12" />

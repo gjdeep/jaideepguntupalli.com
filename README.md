@@ -4,7 +4,7 @@ This is the code base of [Jaideep Guntupalli](https://www.jaideepguntupalli.com)
 
 ## Table of contents
 
-- [Jaideep Guntupalli - Personal Website/Portfolio](#jaideep-guntupalli---personal-websiteportfolio)
+- [jaideepguntupalli.com - Personal Website/Portfolio](#jaideepguntupallicom---personal-websiteportfolio)
   - [Table of contents](#table-of-contents)
   - [Overview](#overview)
     - [What is the project?](#what-is-the-project)
@@ -13,6 +13,7 @@ This is the code base of [Jaideep Guntupalli](https://www.jaideepguntupalli.com)
     - [When will the project be complete?](#when-will-the-project-be-complete)
     - [Links](#links)
   - [My process](#my-process)
+    - [Update the site](#update-the-site)
     - [Built with](#built-with)
 
 ## Overview
@@ -38,6 +39,10 @@ MVP should be done by 19 June 2022.
 -   Website: [Link to Deployment](https://jaideepguntupalli.com)
 
 ## My process
+
+### Update the site
+
+To update the site pls refer to this article >> [How To Use SFTP to Securely Transfer Files with a Remote Server](https://www.digitalocean.com/community/tutorials/how-to-use-sftp-to-securely-transfer-files-with-a-remote-server)
 
 ### Built with
 

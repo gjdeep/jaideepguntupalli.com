@@ -6,12 +6,14 @@ const ProjectPreview = ({
     title,
     date,
     description,
-    link,
-    linktext,
+    link1,
+    linktext1,
+    link2,
+    linktext2,
 }) => {
     return (
         <div className="flex flex-col gap-3 fadeInProj p-6 rounded-md border-2 border-transparent transition-all hover:border-black hover:bg-white hover:scale-105">
-            <Link to={link}>
+            <Link to={link1}>
                 <img
                     src={image}
                     alt={title}
@@ -20,15 +22,26 @@ const ProjectPreview = ({
             </Link>
             <div className="flex flex-col w-full gap-2">
                 <h4 className="font-work font-medium opacity-50">{date}</h4>
-                <Link to={link} className="text-4xl font-bold">
+                <Link to={link1} className="text-4xl font-bold">
                     <span className="hover:text-cus-orange link-underline link-underline-orange link-underline:hover">
                         {title}
                     </span>
                 </Link>
                 <p className="font-work">{description}</p>
-                <Link to={link} className="text-cus-orange whitespace-nowrap">
-                    {linktext}
-                </Link>
+                <div className="flex gap-3">
+                    <Link
+                        to={link1}
+                        className="text-cus-orange whitespace-nowrap"
+                    >
+                        {linktext1}
+                    </Link>
+                    <Link
+                        to={link2}
+                        className="text-cus-orange whitespace-nowrap"
+                    >
+                        {linktext2}
+                    </Link>
+                </div>
             </div>
         </div>
     );

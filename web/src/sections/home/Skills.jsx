@@ -100,19 +100,22 @@ const Skills = () => {
                 </div>
                 <div className="md:w-2/5 flex flex-col justify-around gap-6 md:gap-6">
                     <WorkExp
-                        date="May 2022"
+                        startdate="May 2022"
+                        enddate="Jul 2022"
                         role="Frontend Web Dev Intern"
                         company="Tweek Labs"
                         addr="/work-experience/tweek-labs"
                     />
                     <WorkExp
-                        date="Apr 2022"
+                        startdate="Apr 2022"
+                        enddate="May 2022"
                         role="Web Developer Intern"
                         company="Pixotronics"
                         addr="/work-experience/pixotronics"
                     />
                     <WorkExp
-                        date="Mar 2022"
+                        startdate="Mar 2022"
+                        enddate="May 2022"
                         role="Software Engineer Intern"
                         company="Auriga Innovative Labs"
                         addr="/work-experience/auriga-innovative-labs"

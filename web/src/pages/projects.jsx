@@ -43,7 +43,7 @@ const ProjectsPage = () => {
                         date="Dec 2022"
                         title="mailr"
                         description="A web app through which you can send custom mails to a large amount users with their data as csv.You insert their name as variable to into subject or body. You can also add attachments.When all mails are sent to the sender you will receive a report as mail about how each persons mail status."
-                        link1="https://github.com/JaideepGuntupalli/healthsake"
+                        link1="https://github.com/gjdeep/healthsake"
                         linktext1="Github >>"
                         link2="https://healthsake.jaideepguntupalli.com"
                         linktext2="Website >>"
@@ -53,7 +53,7 @@ const ProjectsPage = () => {
                         date="Sept 2022 - Nov 2022"
                         title="HealthSake"
                         description="A patient data management system is a web app developed primarily to facilitate the verification of the patients’ documents while buying medicines or making medical claims. The portal that facilitates the secure exchange and verification of electronic health records."
-                        link1="https://github.com/JaideepGuntupalli/healthsake"
+                        link1="https://github.com/gjdeep/healthsake"
                         linktext1="Github >>"
                         link2="https://healthsake.jaideepguntupalli.com"
                         linktext2="Website >>"
@@ -79,7 +79,7 @@ const ProjectsPage = () => {
                         date="May 2022"
                         title="Cric-o-pedia.live"
                         description="Designed & Developed a website for Cric-o-pedia.live, a live cricket scorecard website. Built using ReactJS for frontend, Firebase for authentication and deployed a proxy server to get the live cricket scores and stats using ESPNCricinfo API."
-                        link1="https://github.com/JaideepGuntupalli?tab=repositories&q=cric-o-pedia&type=&language=&sort="
+                        link1="https://github.com/gjdeep?tab=repositories&q=cric-o-pedia&type=&language=&sort="
                         linktext1="Github >>"
                         link2="https://cric-o-pedia.live/"
                         linktext2="Website >>"
@@ -89,7 +89,7 @@ const ProjectsPage = () => {
                         date="Apr 2022"
                         title="Messaging App"
                         description="Designed & developed a realtime chatting web app using ReactJS for frontend, NodeJS for backend, MySQL for database and Socket.io for realtime communication."
-                        link1="https://github.com/JaideepGuntupalli/messaging-app"
+                        link1="https://github.com/gjdeep/messaging-app"
                         linktext1="Github >>"
                     />
                     <ProjectPreview
@@ -123,7 +123,7 @@ const ProjectsPage = () => {
                         date="Dec 2021"
                         title="Ludo Master Clone"
                         description="Developed a clone of popular Play Store App Ludo Master for Desktop with Local 2-player Multiplayer game mode developed using Java and JavaFX."
-                        link1="https://github.com/JaideepGuntupalli/Ludo-Master-Clone"
+                        link1="https://github.com/gjdeep/Ludo-Master-Clone"
                         linktext1="Github >>"
                         link2="https://cric-o-pedia.live"
                         linktext2={""}
@@ -133,7 +133,7 @@ const ProjectsPage = () => {
                         date="Aug 2021"
                         title="Assembler and Simulator"
                         description="Designed and programmed an Assembler and Simulator for Assembly Language in Python where Assembly language is taken as input and outputting corresponding Machine Code."
-                        link1="https://github.com/JaideepGuntupalli/Assembler-and-Simulator"
+                        link1="https://github.com/gjdeep/Assembler-and-Simulator"
                         linktext1="Github >>"
                         link2="https://cric-o-pedia.live"
                         linktext2={""}
@@ -143,7 +143,7 @@ const ProjectsPage = () => {
                         date="Dec 2021"
                         title="Ludo Master Clone"
                         description="Developed a clone of popular Play Store App Ludo Master for Desktop with Local 2-player Multiplayer game mode developed using Java and JavaFX."
-                        link="https://github.com/JaideepGuntupalli/Ludo-Master-Clone"
+                        link="https://github.com/gjdeep/Ludo-Master-Clone"
                         linktext="More details >>"
                     />
                     <ProjectPreview
@@ -151,7 +151,7 @@ const ProjectsPage = () => {
                         date="Aug 2021"
                         title="Assembler and Simulator"
                         description="Designed and programmed an Assembler and Simulator for Assembly Language in Python where Assembly language is taken as input and outputting corresponding Machine Code."
-                        link="https://github.com/JaideepGuntupalli/Assembler-and-Simulator"
+                        link="https://github.com/gjdeep/Assembler-and-Simulator"
                         linktext="More details >>"
                     /> */}
                 </div>

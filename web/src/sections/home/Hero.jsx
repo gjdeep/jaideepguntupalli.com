@@ -45,7 +45,7 @@ const Hero = () => {
                     </p>
                 </section>
                 <section className="hidden md:flex gap-5">
-                    <Link to="https://github.com/JaideepGuntupalli">
+                    <Link to="https://github.com/gjdeep">
                         <img src={Github} alt="Github Logo" />
                     </Link>
                     <Link to="https://linkedin.com/in/gjdeep">

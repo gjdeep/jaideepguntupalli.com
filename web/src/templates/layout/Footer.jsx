@@ -29,7 +29,7 @@ const Footer = () => {
                     © 2022 Jaideep Guntupalli. All Rights Reserved.
                 </p>
                 <section className="flex gap-5 pr-8">
-                    <a href="https://github.com/JaideepGuntupalli">
+                    <a href="https://github.com/gjdeep">
                         <img src={Github} alt="Github Logo" />
                     </a>
                     <a href="https://linkedin.com/in/gjdeep">

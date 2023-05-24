@@ -14,7 +14,7 @@
 
     ```shell
     # create a new Gatsby X TailwindCSS site using this minimal starter
-    gatsby new my-gatsby-site https://github.com/JaideepGuntupalli/gatsby-tailwindcss-starter-template.git
+    gatsby new my-gatsby-site https://github.com/gjdeep/gatsby-tailwindcss-starter-template.git
     ```
 
 2.  **Start developing.**

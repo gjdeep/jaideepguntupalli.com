@@ -55,10 +55,8 @@ export const metadata: Metadata = {
         title: "Jaideep Guntupalli",
         card: "summary_large_image",
     },
-    // TODO: Add verification keys. THese are leerobs
     verification: {
-        google: "eZSdmzAXlLkKhNJzfgwDqWORghxnJ8qR9_CHdAh5-xw",
-        yandex: "14d2e73487fa6c71",
+        google: "23ZYfFdqUz2U_c8nCL1j1zLetciI9oHOchFhNPZ5Srs",
     },
 };
 

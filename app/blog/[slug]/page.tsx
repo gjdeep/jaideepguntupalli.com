@@ -23,8 +23,8 @@ export async function generateMetadata({
         slug,
     } = post;
     const ogImage = image
-        ? `https://gjdeep.dev${image}`
-        : `https://gjdeep.dev/og?title=${title}`;
+        ? `https://gjd.one${image}`
+        : `https://gjd.one/og?title=${title}`;
 
     return {
         title,
@@ -34,7 +34,7 @@ export async function generateMetadata({
             description,
             type: "article",
             publishedTime,
-            url: `https://gjdeep.dev/blog/${slug}`,
+            url: `https://gjd.one/blog/${slug}`,
             images: [
                 {
                     url: ogImage,

@@ -24,7 +24,7 @@ const graphik = localFont({
 });
 
 export const metadata: Metadata = {
-    metadataBase: new URL("https://gjdeep.dev"),
+    metadataBase: new URL("https://gjd.one"),
     title: {
         default: "Jaideep Guntupalli",
         template: "%s | Jaideep Guntupalli",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
         title: "Jaideep Guntupalli",
         description:
             "I'm a software engineer immersed in React, Next.js and a hardcore Typescripter. Just messing around, building and writing about awesome stuff!",
-        url: "https://gjdeep.dev",
+        url: "https://gjd.one",
         siteName: "Jaideep Guntupalli",
         locale: "en_US",
         type: "website",

@@ -20,7 +20,7 @@ export async function GET(req: NextRequest) {
                     flexDirection: "column",
                     alignItems: "flex-start",
                     justifyContent: "center",
-                    backgroundImage: "url(https://gjdeep.dev/og-bg.png)",
+                    backgroundImage: "url(https://gjd.one/og-bg.png)",
                 }}
             >
                 <div

@@ -1,0 +1,89 @@
+---
+summary: "This is your first blog post."
+publishedAt: "2021-11-26"
+title: What is HTML semantic, and Why should you care about them?
+---
+
+It is crucial to understand what words mean in any language during a conversation or while reading some text in the language. And if this is computer communication, then it becomes more critical. As part of web design, we use HTML to display content we want on the web page, like headings, paragraphs, images, lists, etc. So HTML5 provides more semantic elements which make easy understanding of the code and improve your website.
+
+This article will go through HTML semantic, some HTML semantic tags, and their uses. We will also be comparing it with non-semantic HTML.
+
+So, let's dive right into it!
+
+## What does semantic mean?
+
+Semantics refers to relating to meaning in language or logic. According to [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#semantics_in_html), Semantics in programming refers to interpreting a piece of code. For example, "what effect does running that line of JavaScript have?" or "what purpose or role does that HTML element has" (rather than "what does it look like?".)
+
+## What is HTML semantic?
+
+Semantic HTML or semantic markup introduces meaning to the web page rather than just presenting the content. An HTML semantic element, when wrapped around content, for example, text, gives a role or meaning for the content. For example, let us consider a tag like `<h1>`. We use it to display the main heading of the web page. Of course, it has the largest default text size, but it can be changed using CSS and even make it the minor text on the page. But the role of the `<h1>` tag was to mention it as the main heading of the page.
+
+HTML5 has many semantic elements which do the job of giving a role or meaning to the content. Some of the examples include, `<header>`, `<main>`, `<footer>`, `<section>`, `<article>`, etc. You can find the full list [here](https://learn-the-web.algonquindesign.ca/topics/html-semantics-cheat-sheet/) or you can google it. All of these elements act as `<div>`, but when some just read the HTML of the web page, they understand the role of the content.
+
+![blog_html (1).png](https://cdn.hashnode.com/res/hashnode/image/upload/v1637836950349/dnnBQSsvx.png)
+
+An example only if div was used to write HTML.
+
+![blog_html.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1637837036077/CNqYm-WWV.png)
+
+An example where semantic elements are also used to write HTML
+
+If you tried to read both snippets above, you might have understood the importance of semantics and improved readability.
+
+## History of HTML Semantics
+
+HTML was initially designed as a markup language to describe documents on the early internet. Mainly it is used to share scientific papers across universities. But as the internet grew and was adopted by more people, it needs to be evolved.
+
+Since HTML4 got upgraded to HTML5, some of us might still be confused to this day about why so many new "semantic" elements don't seem to show any significant changes.
+
+Let us look at a comparison between `<section>` and `<article>`. You might think, "What's the difference? Both of these elements are used for sectioning content". They can also be used interchangeably. It's just a matter of which situation. HTML4 used to offer only `<div>`, a container element. This is still present in HTML5, it also provides us with `<section>` and `<article>` in a way to replace `<div>`.
+
+An example of using `<section>` and `<article>` instead of `<div>`.
+
+![blog_html (2).png](https://cdn.hashnode.com/res/hashnode/image/upload/v1637837124606/SbrgjkAaH.png)
+
+This example is from [Freecodecamp's article](https://www.freecodecamp.org/news/semantic-html5-elements/) on the same topic gives us an idea about how using section and article tags make sense.
+
+## What are the benefits of following HTML semantics?
+
+All these are fine but, what are some real benefits of HTML semantics? Using HTML semantic tags makes it easier for web crawlers to identify the critical content of a web page. Using HTML semantic tags will significantly make it easier for web crawlers to identify your content and **improve your SEO.**
+
+Using semantics also improves the **readability of your code**, as seen in the above example, where we compared a `<div>` soup with a snippet where there is a proper use of semantic tags. Someone with limited knowledge about HTML would also know what's going with the help of semantic tags.
+
+The **accessibility** of your website is also significantly improved with the use of semantic tags in HTML. Screen Readers will navigate better on the pages where proper semantic tags are used. Altogether, there is no harm in using semantic tags in your HTML, and the benefits it brings will only make your development more accessible and more beneficial.
+
+## Some real-world examples
+
+Throughout this article, we have just been seeing snippets of small code as some examples, but let us go through some production code that exists on the internet and try to understand the importance of the semantics in HTML.
+
+For this, I am choosing Medium and Stripes landing pages. You can inspect these pages in your browsers to understand the importance of semantics. I have attached the screenshots, but it would be better if you checked them out by yourself.
+
+![stripe.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1637837417479/dbI4AtOQw.png)
+
+If you look at [Stripe](https://stripe.com)'s landing page has all sorts of cool stuff like animations, gradients, an interactive globe, etc. But when you look at their HTML, you will understand the page's header and how their parts of pages are divided into sections and all. It is easy to know at a glance.
+
+![medium.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1637837443435/4w_yktC25.png)
+
+Now you can go to [Medium](https://medium.com)'s landing page (If you are logged in, try it in incognito mode). It is just a div soup with meaningless classes, at least at first glance. If you need to understand this, you need to spend a lot of time. Now think if a web crawler or a screen reader comes across this mess. Do you think they will be able to understand the structure and importance of content in this mess?
+
+## Accessibility
+
+I want to touch on accessibility before I conclude this article. If you know the importance of it and follow it, please feel free to skip this section.
+
+More than **1 billion** persons in the world have some form of disability. This corresponds to about **15% of the world's population**. Between 110-190 million people have very significant difficulties in functioning _([Source: World report on disability](https://en.wikipedia.org/wiki/World_report_on_disability))_.
+
+Accessibility is the practice of making your websites usable by as many people as possible _([Source: MDN](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility))_.
+
+For more information on this topic, I would suggest [MDN's article](https://developer.mozilla.org/en-US/docs/Web/Accessibility) on accessibility.
+
+## Conclusion
+
+HTML semantics give a role or meaning to your content. In addition to this, it improves your SEO, the accessibility of your page, and improves the readability of your code. So, it would be best to use it in your next project or update your current ones or both. 😉
+
+Will you be using HTML semantics in your next project, or am I wrong somewhere?
+
+_Comment down below!_ 👇
+
+Thanks for reading till the end, and see you in the next one!
+
+Cover Photo by [Jackson So](https://unsplash.com/@jacksonsophat?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)

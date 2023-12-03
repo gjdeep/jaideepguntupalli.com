@@ -1,0 +1,127 @@
+---
+title: ⚙️ Assembler and Simulator
+description: Created Python Assembly Language Assembler & Simulator - Input Assembly Language, output Machine Code.
+date: "2021-08-01"
+published: true
+tech: "Python, Assembly Language, Machine Code, Computer Architecture"
+repository: "jaideepguntupalli/Assembler-and-Simulator"
+---
+
+Assembler and Simulator designed for converting assembly language into machine code and simulating its execution.
+
+## Overview
+
+### What is the project?
+
+The Assembler and Simulator project offers tools for processing assembly language into machine code and for simulating the execution of this code. It aims to provide a comprehensive understanding of how assembly code is translated and executed in a computer system.
+
+### What is the MVP?
+
+The MVP for this project includes:
+
+-   **Assembler**: Converts assembly language into 16-bit machine code, capable of handling various instructions, labels, variables, and syntax errors.
+-   **Simulator**: Executes 16-bit machine code, displaying memory and register states after execution, and providing a memory dump upon program completion.
+
+## Assembler
+
+The Assembler takes assembly language as input and returns 16-bit machine code. It processes different types of lines such as labels followed by instructions, variable definitions, and instruction lines. Key capabilities of the Assembler include:
+
+-   Handling all supported instructions.
+-   Processing labels and variables.
+-   Checking for illegal instructions and generating distinct error messages.
+-   Generating the corresponding binary for error-free code.
+
+### Input
+
+-   Assembly language instructions, including variable definitions and labels.
+-   Instructions are either standalone, preceded by labels, or variable definitions at the beginning of the program.
+
+### Output
+
+-   16-bit binary machine code for each line of assembly language.
+-   Error messages for syntax errors or illegal instructions.
+
+### Example
+
+Input:
+
+```
+var X
+mov R1 $10
+mov R2 $100
+mul R3 R1 R2
+st R3 X
+hlt
+```
+
+Output:
+
+```
+0001000100001010
+0001001001100100
+0011000011001010
+0010101100000101
+1001100000000000
+```
+
+### Additional Details about the Assembler
+
+-   **Syntax Handling**: The Assembler efficiently manages different syntaxes including opcodes, registers, memory addresses, and immediate values.
+-   **Error Detection**: It detects and reports various types of errors like typos, undefined variables, misuse of labels, and incorrect syntax.
+-   **Output Format**: For correct assembly programs, it outputs a binary representation in a 16-bit format.
+
+## Simulator
+
+The Simulator takes in 16-bit machine code and prints or dumps the memory state at the end of the program. It includes distinct components like Memory (MEM), Program Counter (PC), Register File (RF), and Execution Engine (EE). Key functionalities include:
+
+-   Loading and executing code from system memory.
+-   Outputting the program counter and register values after each instruction.
+-   Providing a complete memory dump after the program halts.
+
+### Input
+
+-   16-bit machine code, read from stdin.
+
+### Output
+
+-   Program counter and register values after each instruction.
+-   Memory dump of the entire memory after program completion.
+
+### Example
+
+Output Format:
+
+```
+<PC (8 bits)> <space> <R0 (16 bits)> <space>...<R6 (16 bits)> <space> <FLAGS (16 bits)>
+< 16-bit data>
+...
+< 16-bit data>
+```
+
+### Additional Details about the Simulator
+
+-   **Memory (MEM)**: Stores 512 bytes, initialized to zeros, and handles 8-bit address input.
+-   **Program Counter (PC)**: An 8-bit register pointing to the current instruction.
+-   **Register File (RF)**: Manages register values including general-purpose registers and FLAGS.
+-   **Execution Engine (EE)**: Executes instructions by updating RF and PC based on the instruction from MEM.
+
+## Built with
+
+-   Assembly Language: For writing assembly instructions.
+-   Bash Script: For running the Assembler and Simulator.
+-   C/C++: Used for developing the core functionalities of the Assembler and Simulator.
+
+## How to Use
+
+1. **Assembler**: Add code to the `Simple-Assembler` directory and execute it using the script in `Simple-Assembler/run`.
+2. **Simulator**: Add code to the `SimpleSimulator` directory and execute it using the script in `SimpleSimulator/run`.
+3. **Automated Testing**: Use `automatedTesting` for evaluating commits with various options.
+
+## Achievement
+
+-   Accurate translation of complex assembly language into machine code.
+-   Effective simulation of machine code execution, demonstrating computer system operations.
+
+## License
+
+[MIT](https://opensource.org/licenses/MIT)

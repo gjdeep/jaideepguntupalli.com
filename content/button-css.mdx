@@ -1,0 +1,67 @@
+---
+title: "Hover Animation of a Button using only CSS"
+publishedAt: "2021-12-03"
+summary: "This is your first blog post."
+---
+
+Hey everyone, this is going to be my first how-to blog. I will try my best to cover every single detail or point to a resource so that your doubts get cleared. Without any due, let's get started.
+
+Today we will be covering how to animate a button as below using only CSS. This will be short and straightforward to implement, but before we start, I expect you to have a basic idea about HTML and CSS, like how to write basic markup and how CSS selectors work. If not, you can go through this playlist by [Kevin Powell](https://www.youtube.com/playlist?list=PL4-IK0AVhVjM0xE0K2uZRvsM7LkIhsPT-).
+
+![Animation which we will be recreating](https://cdn.hashnode.com/res/hashnode/image/upload/v1638446643391/6GP26jtMr.gif)
+
+## HTML
+
+We need to add a button in the body in your index.html file, as shown below.
+
+![Code in body tag in HTML](https://cdn.hashnode.com/res/hashnode/image/upload/v1638445972813/RapPgsagp.png)
+
+If you aren't on a CodePen, you will need to link your stylesheet section. I will use the Montserrat font family to style the text in the button, and I got it from [Google Fonts](https://fonts.google.com). You can use your favorite font from Google fonts but don't forget to include the required lines in the section.
+
+## CSS
+
+Let's now start CSS for this.
+
+### Body
+
+First, let's add the background color and font family by selecting the whole body. We can use either the `background` or `background-color` property to set the color for the background. I randomly chose a theme from [Coolors](https://coolors.co/) and used `#ffe8d6` as the background color. For the Font family, we will use `font-family` property to set the font to `Montserrat`, and we will add `sans-serif` as the fallback font.
+
+![CSS for body](https://cdn.hashnode.com/res/hashnode/image/upload/v1638446985027/malDZVrQI.png)
+
+We will also center the button for more visibility using the `display` property set to `flex`. If you have no experience using flexbox, you can ignore these for now, or check out this 15 min video by [Web Dev Simplified](https://youtu.be/fYq5PXgSsbE) for understanding. It is going to be a bit tricky at the start and to get the hang of it.
+
+### Button Rest state
+
+Now let's get to styling the button. First, let's remove that ugly background by setting `background` property to `none` or `transparent`. Then, increase the `font-size` to `large` for visibility and put the `font-weight` to `800`. Set the `color` property to `#6b705c`, which sets the font color. Let's make font to all CAPS by setting `text-transform` property to `uppercase`. Now let's add some padding and border to the button, as shown below.
+
+![CSS for button](https://cdn.hashnode.com/res/hashnode/image/upload/v1638447753151/qXjzZsdF5.png)
+
+### Button Hover state
+
+We have now coded the rest state of the button. Let's now code the hover state of the button.
+
+For this, we will use a [pseudo-class](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes) called [hover](https://developer.mozilla.org/en-US/docs/Web/CSS/:hover). Hover Styles can be applied for an element by adding `:hover` syntax to the end of the selector.
+
+We will be changing the background to a darker color to intimate the selection. We will use `#6b705c` as the background to the button. We will also change the font's color using `color` property to `#ffe8d6`(a lighter shade) to make it readable. We will add a `border-radius` to create rounded corners for the button. You can keep or remove the `border`. But I removed it so that it would give a cleaner animation. We will now shift the button up a bit to give the feeling of the lift. We will do this using the `transform`property and set it to `translateY(-5px)`. We will also add shadow using `box-shadow`property. For more details, check out this MDN page about [box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow). We will also set the `cursor` to the `pointer` to show the hand symbol instead of the arrow we get.
+
+![CSS for hover state](https://cdn.hashnode.com/res/hashnode/image/upload/v1638448138328/bB8W8IhZ7r.png)
+
+### Button Transitions
+
+Now the before and hover styles are done but, it is too snappy. So we will add some transitions to make it smooth and satisfying.
+
+We will use the transition property to set the timings and time functions. For more details, check out this [page](https://developer.mozilla.org/en-US/docs/Web/CSS/transition) from MDN.
+
+![Hover Transition of Button](https://cdn.hashnode.com/res/hashnode/image/upload/v1638448205104/GaZljjbNU.png)
+
+Now it should look pretty good and snappy. If you have any doubts, check out my [CodePen](https://codepen.io/gj_deep/pen/yLzNNxj) of the above tutorial, so you can play around with the timings and colors to make your own.
+
+Was this a helpful blog? and did you learn something new?
+
+_Comment down below!_ 👇
+
+And don't forget to give feedback about the blog down below.
+
+Thanks for reading till the end, and see you in the next one!
+
+Cover Photo by [KOBU Agency](https://unsplash.com/@kobuagency?utm_source=Hashnode&utm_medium=referral) on [Unsplash](https://unsplash.com/)

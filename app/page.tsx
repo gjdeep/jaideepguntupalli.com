@@ -1,5 +1,6 @@
 import { allBlogs, allProjects } from "contentlayer/generated";
 import { getViewsCount } from "lib/metrics";
+import Image from "next/image";
 import Link from "next/link";
 import MetaData from "./blog/meta-data";
 import { Card } from "./components/card";
@@ -31,6 +32,7 @@ export default async function Page() {
             <h1 className="font-bold text-2xl mb-8 tracking-tighter flex justify-start gap-4 items-center">
                 <a href="https://github.com/jaideepguntupalli" target="_blank">
                     <img
+                        alt="Jaideep Guntupalli"
                         src="/jaideep.png"
                         className="w-12 h-12 border-2 p-1 border-purple-400 rounded-full"
                     />
@@ -55,7 +57,7 @@ export default async function Page() {
                         target="_blank"
                         className="border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 rounded p-1 pb-[0.125rem] text-sm inline-flex items-center leading-4 text-neutral-900 dark:text-neutral-100 no-underline"
                     >
-                        <img
+                        <Image
                             alt="React logomark"
                             src="/react-logo.svg"
                             className="!mr-1 h-[14px] w-[14px]"
@@ -70,7 +72,7 @@ export default async function Page() {
                         target="_blank"
                         className="border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 rounded p-1 text-sm inline-flex items-center leading-4 text-neutral-900 dark:text-neutral-100 no-underline"
                     >
-                        <img
+                        <Image
                             alt="Next.js logomark"
                             src="/next-logo.svg"
                             className="!mr-1"
@@ -87,7 +89,7 @@ export default async function Page() {
                         target="_blank"
                         className="border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 rounded p-1 pb-[0.125rem] text-sm inline-flex items-center leading-4 text-neutral-900 dark:text-neutral-100 no-underline"
                     >
-                        <img
+                        <Image
                             alt="Typescript logomark"
                             src="/typescript-logo.svg"
                             className="!mr-1 h-[14px] w-[14px]"

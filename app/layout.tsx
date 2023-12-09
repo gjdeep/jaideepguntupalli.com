@@ -1,4 +1,4 @@
-import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import clsx from "clsx";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
@@ -77,7 +77,7 @@ export default function RootLayout({
                 <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
                     <Sidebar />
                     {children}
-                    <Analytics />
+                    <SpeedInsights />
                     <Footer />
                 </main>
             </body>

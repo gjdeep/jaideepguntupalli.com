@@ -4,6 +4,7 @@ import { getViewsCount } from "lib/metrics";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
+import Skeleton from "react-loading-skeleton";
 import Balancer from "react-wrap-balancer";
 import ViewCounter from "../view-counter";
 
@@ -23,8 +24,8 @@ export async function generateMetadata({
         slug,
     } = post;
     const ogImage = image
-        ? `https://gjd.one${image}`
-        : `https://gjd.one/og?title=${title}`;
+        ? `https://gjdeep.dev${image}`
+        : `https://gjdeep.dev/og?title=${title}`;
 
     return {
         title,
@@ -34,7 +35,7 @@ export async function generateMetadata({
             description,
             type: "article",
             publishedTime,
-            url: `https://gjd.one/blog/${slug}`,
+            url: `https://gjdeep.dev/blog/${slug}`,
             images: [
                 {
                     url: ogImage,
@@ -103,7 +104,13 @@ export default async function Blog({ params }) {
                     {formatDate(post.publishedAt)}
                 </p>
                 {/* I also want an error boundary here */}
-                <Suspense>
+                <Suspense
+                    fallback={
+                        <p>
+                            <Skeleton />
+                        </p>
+                    }
+                >
                     <Views slug={post.slug} />
                 </Suspense>
             </div>

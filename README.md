@@ -1,4 +1,4 @@
-# gjd.one
+# gjdeep.dev
 
 This is the code base of Jaideep Guntupalli.
 

@@ -1,6 +1,7 @@
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import clsx from "clsx";
 import type { Metadata } from "next";
+import PlausibleProvider from "next-plausible";
 import localFont from "next/font/local";
 import Footer from "./components/footer";
 import Sidebar from "./components/sidebar";
@@ -73,6 +74,9 @@ export default function RootLayout({
                 graphik.variable
             )}
         >
+            <head>
+                <PlausibleProvider domain="gjdeep.dev" />
+            </head>
             <body className="antialiased max-w-2xl flex flex-col md:flex-row mx-4 mt-8 md:mx-auto">
                 <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
                     <Sidebar />

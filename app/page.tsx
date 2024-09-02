@@ -1,5 +1,5 @@
 import { allBlogs, allProjects } from "contentlayer/generated";
-import { getViewsCount } from "lib/metrics";
+// import { getViewsCount } from "lib/metrics";
 import Image from "next/image";
 import Link from "next/link";
 import MetaData from "./blog/meta-data";
@@ -7,7 +7,7 @@ import { Card } from "./components/card";
 import { Article } from "./projects/article";
 
 export default async function Page() {
-    const allViews = await getViewsCount();
+    // const allViews = await getViewsCount();
 
     const recentProjects = allProjects
         .filter((p) => p.published)
@@ -82,7 +82,7 @@ export default async function Page() {
                         Next.js
                     </a>{" "}
                 </span>
-                and a hardcore{" "}
+                and{" "}
                 <span className="not-prose">
                     <a
                         href="https://www.typescriptlang.org/"
@@ -96,33 +96,34 @@ export default async function Page() {
                             width="14"
                             height="14"
                         />
-                        TypeScripter
+                        TypeScript
                     </a>
                 </span>
                 . Building{" "}
                 <Link href={"/projects"}>
                     exceptional and accessible digital experiences
                 </Link>{" "}
-                is my forte, honed through{" "}
+                is my forte, developed through{" "}
                 <Link href={"/contributions"}>my adventures</Link> in startups,
                 leading tech firms and contributions to open-source projects.
-                Currently, I am building{" "}
+                Currently, I am working as a SWE at{" "}
                 <a
                     target="_blank"
-                    href="https://huddl.one/"
+                    href="https://bitespeed.co/"
                     className="text-purple-300"
                 >
-                    huddl.one
-                </a>{" "}
-                , a platform for programmers to connect and learn.
+                    Bitespeed
+                </a>
+                .
             </p>
             <p className="prose prose-neutral dark:prose-invert mt-4">
-                And also as a student at{" "}
+                And also as a graduate of{" "}
                 <a href="https://iiitd.ac.in/" target="_blank">
                     IIIT Delhi
                 </a>
-                , I am immersing myself in the complexities of Computer Science.
-                If you want to get in touch, I'm most responsive over{" "}
+                , I immersed myself in the complexities of Computer Science
+                during my B.Tech. If you want to get in touch, I'm most
+                responsive over{" "}
                 <a href="mailto:guntupallijaideep@gmail.com">email</a> and I
                 tend to be pretty active on <a href="https://x.com/gjdeep">X</a>{" "}
                 and{" "}
@@ -138,7 +139,7 @@ export default async function Page() {
             {recentBlogs.map((post) => (
                 <Link
                     key={post.slug}
-                    className="flex flex-col space-y-1 mb-4"
+                    className="flex flex-col space-y-1 mb-4 border-b border-neutral-200 dark:border-neutral-700 pb-3"
                     href={`/blog/${post.slug}`}
                 >
                     <div className="w-full flex flex-col gap-[0.125rem]">
@@ -148,7 +149,7 @@ export default async function Page() {
 
                         <MetaData
                             publishedAt={post.publishedAt}
-                            allViews={allViews}
+                            // allViews={allViews}
                             slug={post.slug}
                             trackView={false}
                         />

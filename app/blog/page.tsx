@@ -1,5 +1,5 @@
 import { allBlogs } from "contentlayer/generated";
-import { getViewsCount } from "lib/metrics";
+// import { getViewsCount } from "lib/metrics";
 import type { Metadata } from "next";
 import Link from "next/link";
 import MetaData from "./meta-data";
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 export default async function BlogPage() {
-    const allViews = await getViewsCount();
+    // const allViews = await getViewsCount();
 
     return (
         <section>
@@ -27,7 +27,7 @@ export default async function BlogPage() {
                 .map((post) => (
                     <Link
                         key={post.slug}
-                        className="flex flex-col space-y-1 mb-4"
+                        className="flex flex-col space-y-1 mb-4 border-b border-neutral-200 dark:border-neutral-700 pb-3"
                         href={`/blog/${post.slug}`}
                     >
                         <div className="w-full flex flex-col gap-[0.125rem]">
@@ -37,7 +37,7 @@ export default async function BlogPage() {
 
                             <MetaData
                                 publishedAt={post.publishedAt}
-                                allViews={allViews}
+                                // allViews={allViews}
                                 slug={post.slug}
                                 trackView={false}
                             />

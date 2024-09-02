@@ -19,3 +19,5 @@ export const getBlogViews = cache(async () => {
 export const getViewsCount = cache(async () => {
     return queryBuilder.selectFrom("views").select(["slug", "count"]).execute();
 });
+
+// TODO: Need to shift to dribble/prisma with setup to use same psql db for all projects some how

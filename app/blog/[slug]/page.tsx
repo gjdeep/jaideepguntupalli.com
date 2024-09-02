@@ -1,6 +1,6 @@
 import { Mdx } from "app/components/mdx";
 import { allBlogs } from "contentlayer/generated";
-import { getViewsCount } from "lib/metrics";
+// import { getViewsCount } from "lib/metrics";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
@@ -111,7 +111,7 @@ export default async function Blog({ params }) {
                         </p>
                     }
                 >
-                    <Views slug={post.slug} />
+                    {/* <Views slug={post.slug} /> */}
                 </Suspense>
             </div>
             <Mdx code={post.body.code} />
@@ -122,7 +122,7 @@ export default async function Blog({ params }) {
 async function Views({ slug }: { slug: string }) {
     let views;
     try {
-        views = await getViewsCount();
+        // views = await getViewsCount();
     } catch (error) {
         console.error(error);
     }
